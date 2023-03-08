@@ -1,11 +1,24 @@
 package testX5;
 
+import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.conditions.Text;
+import data.ContentMenu;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Stream;
+
+import static com.codeborne.selenide.CollectionCondition.*;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class X5GroupTest {
@@ -60,6 +73,7 @@ public class X5GroupTest {
         switchTo().window(1).close();
 
     }
+
     @Test
     @Tag("Search")
     void headerSearchTest() {
@@ -82,9 +96,42 @@ public class X5GroupTest {
         $(".search-form__type-cnt").find(byText("по дате")).click();
         $("div.search-form__buttons").find(byText("Найти")).click();
         $(".header__logo").click();
-
     }
 
+    static Stream<Arguments> menuContain() {
+        return Stream.of(
+                Arguments.of(ContentMenu.Компания, List.of("История компании" + "\n" + "География" +
+                        "\n" + "Деловая этика" + "\n" + "Стратегия устойчивого развития", "", "", "")),
+                Arguments.of(ContentMenu.Партнерам, List.of("", "Добросовестное партнёрство" + "\n" + "Поставщикам"
+                        + "\n" + "Сервисы для поставщиков" + "\n" + "Маркетинговые возможности" + "\n" + "Стать франчайзи"
+                        + "\n" + "X5 Transport" + "\n" + "Операции с недвижимостью" + "\n" + "X5 Import" +
+                        "\n" + "X5 Ready Food" + "\n" + "Закупки для собственных нужд X5 Group", "", "")),
+                Arguments.of(ContentMenu.Инвесторам, List.of("", "", "Отчёты и результаты" + "\n"
+                        + "Акции" + "\n" + "Долговые инструменты" + "\n" + "Корпоративное управление" +
+                        "\n" + "Кредитные рейтинги" + "\n" + "Частным инвесторам" +
+                        "\n" + "Календарь инвестора" + "\n" + "ESG", "")),
+                Arguments.of(ContentMenu.Пресс, List.of("", "", "", "Пресс-релизы" + "\n" + "Интервью" +
+                        "\n" + "Индекс «Пятёрочки»" + "\n" + "Фотобанк" + "\n" + "Фирменный стиль X5 Group" +
+                        "\n" + "Контакты для прессы"))
+        );
+    }
+
+    @MethodSource
+    @ParameterizedTest
+    @Tag("Menu")
+    void menuContain(
+
+            ContentMenu contain,
+            List<String> buttons
+    ) {
+
+        Configuration.holdBrowserOpen = true;
+
+        open("https://www.x5.ru/ru/");
+
+        $(".header__content-menu").find(withText(contain.name())).hover();
+        $$("ul.header__sub-menu-container").shouldHave(texts(buttons));
+    }
 
 
 }
