@@ -80,7 +80,7 @@ public class X5GroupTest {
     @Tag("Search")
     void headerSearchTest() {
 
-        Configuration.holdBrowserOpen = true;
+      //  Configuration.holdBrowserOpen = true;
 
         open("https://www.x5.ru/ru/");
         $("div.cookie-consent__button-group").find(byText("Принять")).click();
@@ -98,6 +98,7 @@ public class X5GroupTest {
         $(".search-form__type-cnt").find(byText("по дате")).click();
         $("div.search-form__buttons").find(byText("Найти")).click();
         $(".header__logo").click();
+
     }
 
     static Stream<Arguments> menuContain() {
@@ -127,18 +128,20 @@ public class X5GroupTest {
             List<String> buttons
     ) {
 
-        Configuration.holdBrowserOpen = true;
+       // Configuration.holdBrowserOpen = true;
 
         open("https://www.x5.ru/ru/");
 
         $(".header__content-menu").find(withText(contain.name())).hover();
         $$("ul.header__sub-menu-container").shouldHave(texts(buttons));
+
     }
 
     @Test
+    @Tag("Feedback")
     void FeedBackEmployee() {
 
-        Configuration.holdBrowserOpen = true;
+       // Configuration.holdBrowserOpen = true;
 
         open("https://www.x5.ru/ru/");
 
@@ -156,6 +159,7 @@ public class X5GroupTest {
         $("div.hlf-table").find(byText("Я бывший сотрудник")).click();
         sleep(500);
         $("div.hlf-table").find(byText("Я не сотрудник")).click();
+
 
     }
 
