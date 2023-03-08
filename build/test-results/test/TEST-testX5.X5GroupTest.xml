@@ -1,29 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testX5.X5GroupTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-03-08T16:01:47" hostname="LAPTOP-57D3LCEV" time="17.477">
+<testsuite name="testX5.X5GroupTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-08T21:16:52" hostname="LAPTOP-57D3LCEV" time="7.922">
   <properties/>
-  <testcase name="[1] Компания, [История компании&#10;География&#10;Деловая этика&#10;Стратегия устойчивого развития, , , ]" classname="testX5.X5GroupTest" time="4.979"/>
-  <testcase name="[2] Партнерам, [, Добросовестное партнёрство&#10;Поставщикам&#10;Сервисы для поставщиков&#10;Маркетинговые возможности&#10;Стать франчайзи&#10;X5 Transport&#10;Операции с недвижимостью&#10;X5 Import&#10;X5 Ready Food&#10;Закупки для собственных нужд X5 Group, , ]" classname="testX5.X5GroupTest" time="0.834"/>
-  <testcase name="[3] Инвесторам, [, , Отчёты и результаты&#10;Акции&#10;Долговые инструменты&#10;Корпоративное управление&#10;Кредитные рейтинги&#10;Частным инвесторам&#10;Календарь инвестора&#10;ESG, ]" classname="testX5.X5GroupTest" time="0.868"/>
-  <testcase name="[4] Пресс, [, , , Пресс-релизы&#10;Интервью&#10;Индекс «Пятёрочки»&#10;Фотобанк&#10;Фирменный стиль X5 Group&#10;Контакты для прессы]" classname="testX5.X5GroupTest" time="0.765"/>
-  <testcase name="mainPageTest()" classname="testX5.X5GroupTest" time="5.047"/>
-  <testcase name="headerSearchTest()" classname="testX5.X5GroupTest" time="4.966"/>
+  <testcase name="FeedBackEmployee()" classname="testX5.X5GroupTest" time="7.922"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - No webdriver is bound to current thread: 1 - let's create a new webdriver
-[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: C:\Users\nfsmw\IdeaProjects\TestX5Group\build\downloads\1678291307306_52192_1
+[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: C:\Users\nfsmw\IdeaProjects\TestX5Group\build\downloads\1678310212392_61520_1
 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\nfsmw\.cache\selenium\chromedriver\win32\110.0.5481.77\chromedriver.exe
-Starting ChromeDriver 110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839}) on port 52098
+Starting ChromeDriver 110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839}) on port 62706
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1678291310.078][WARNING]: virtual void DevToolsClientImpl::AddListener(DevToolsEventListener *) subscribing a listener to the already connected DevToolsClient. Connection notification will not arrive.
-мар. 08, 2023 7:01:50 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1678310215.216][WARNING]: virtual void DevToolsClientImpl::AddListener(DevToolsEventListener *) subscribing a listener to the already connected DevToolsClient. Connection notification will not arrive.
+мар. 09, 2023 12:16:55 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-мар. 08, 2023 7:01:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+мар. 09, 2023 12:16:55 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 110, so returning the closest version found: a no-op implementation
-мар. 08, 2023 7:01:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+мар. 09, 2023 12:16:55 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Unable to find CDP implementation matching 110.
-мар. 08, 2023 7:01:50 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+мар. 09, 2023 12:16:55 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
 WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.1.2` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO com.codeborne.selenide.webdriver.HttpClientTimeouts - Changed connectTimeout from PT10S to PT10S
 [Test worker] INFO com.codeborne.selenide.webdriver.HttpClientTimeouts - Changed readTimeout from PT1M30S to PT1M30S
@@ -31,31 +26,6 @@ WARNING: Unable to find version of CDP to use for . You may need to include a de
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=110.0.5481.178 Platform=WINDOWS
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.3.5
 [Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.1.2 build revision: 9a5a329c5a
-[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on WINDOWS (cb21d4d48873554a93134fd5a85b048a)
-[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - Browser and proxy will stay open due to holdBrowserOpen=true: 1 -> ChromeDriver: chrome on WINDOWS (cb21d4d48873554a93134fd5a85b048a), null
-[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - Webdriver has been closed meanwhile. Let's re-create it.
-[Test worker] INFO com.codeborne.selenide.drivercommands.CloseDriverCommand - Hold browser and proxy open: 1 -> ChromeDriver: chrome on WINDOWS (cb21d4d48873554a93134fd5a85b048a), null
-[Test worker] INFO com.codeborne.selenide.impl.FileHelper - Creating folder: C:\Users\nfsmw\IdeaProjects\TestX5Group\build\downloads\1678291319632_52192_1
-Starting ChromeDriver 110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839}) on port 51084
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-[1678291320.709][WARNING]: virtual void DevToolsClientImpl::AddListener(DevToolsEventListener *) subscribing a listener to the already connected DevToolsClient. Connection notification will not arrive.
-мар. 08, 2023 7:02:00 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-мар. 08, 2023 7:02:00 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 110, so returning the closest version found: a no-op implementation
-мар. 08, 2023 7:02:00 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-INFO: Unable to find CDP implementation matching 110.
-мар. 08, 2023 7:02:00 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
-WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.1.2` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
-[Test worker] INFO com.codeborne.selenide.webdriver.HttpClientTimeouts - Changed connectTimeout from PT10S to PT10S
-[Test worker] INFO com.codeborne.selenide.webdriver.HttpClientTimeouts - Changed readTimeout from PT1M30S to PT1M30S
-[Test worker] INFO com.codeborne.selenide.webdriver.BrowserResizer - Set browser size to 1366x768
-[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - BrowserName=chrome Version=110.0.5481.178 Platform=WINDOWS
-[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenide v. 6.3.5
-[Test worker] INFO com.codeborne.selenide.webdriver.WebDriverFactory - Selenium WebDriver v. 4.1.2 build revision: 9a5a329c5a
-[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on WINDOWS (9ba491b5a7f29b917e261d01dc9efdd9)
-[Test worker] INFO com.codeborne.selenide.impl.WebDriverThreadLocalContainer - Browser and proxy will stay open due to holdBrowserOpen=true: 1 -> ChromeDriver: chrome on WINDOWS (9ba491b5a7f29b917e261d01dc9efdd9), null
+[Test worker] INFO com.codeborne.selenide.drivercommands.CreateDriverCommand - Created webdriver in thread 1: ChromeDriver -> ChromeDriver: chrome on WINDOWS (07bdb7ed466f43b31a639419ff1c09fd)
 ]]></system-err>
 </testsuite>

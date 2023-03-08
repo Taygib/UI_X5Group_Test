@@ -5,6 +5,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.conditions.Text;
 import data.ContentMenu;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -62,6 +63,7 @@ public class X5GroupTest {
         $("div.corporate-block").find(byText("Как получить доступ к миллионам клиентов по всей " +
                 "стране и другие возможности сотрудничества")).hover();
         $("div.corporate-block").find(byText("Партнерам")).click();
+
         switchTo().window(0);
 
 
@@ -133,5 +135,28 @@ public class X5GroupTest {
         $$("ul.header__sub-menu-container").shouldHave(texts(buttons));
     }
 
+    @Test
+    void FeedBackEmployee() {
+
+        Configuration.holdBrowserOpen = true;
+
+        open("https://www.x5.ru/ru/");
+
+        $("div.cookie-consent__button-group").find(byText("Принять")).click();
+
+        $(".feedback").$(".feedback__content").hover();
+        $(".custom-select").shouldHave(text("Выберите роль"));
+        $(".css-1n9v7xy").click();
+        $("#react-select-2-listbox").find(byText("Я сотрудник")).click();
+        $$(".feedback__content").find(text("Далее")).hover();
+        $$(".button__inner").find(text("Далее")).click();
+        switchTo().window(1);
+        $("div.hlf-table").find(byText("Я сотрудник")).click();
+        sleep(500);
+        $("div.hlf-table").find(byText("Я бывший сотрудник")).click();
+        sleep(500);
+        $("div.hlf-table").find(byText("Я не сотрудник")).click();
+
+    }
 
 }
