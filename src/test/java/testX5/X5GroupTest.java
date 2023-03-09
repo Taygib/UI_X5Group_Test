@@ -1,78 +1,40 @@
 package testX5;
 
-import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.conditions.Text;
 import data.ContentMenu;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import pages.WorkPage;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static com.codeborne.selenide.CollectionCondition.*;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class X5GroupTest {
+public class X5GroupTest extends TestBase {
 
     @Test
     @Tag("mainTest")
     void mainPageTest() {
 
-        Configuration.holdBrowserOpen = true;
-
-        open("https://www.x5.ru/ru/");
-        $("div.cookie-consent__button-group").find(byText("Принять")).click();
-
-        $("div.hero-main__logo").find(byText("Выбор в пользу будущего"));
-
+        // Configuration.holdBrowserOpen = true;
+        workPage.openPage();
         //Планирование
-        $("div.buyer__outer-container").find(byText("Найти рецепт и подобрать ингредиенты")).hover();
-        $("div.buyer__outer-container").find(byText("Планирование")).click();
-        Selenide.back();
-
+        workPage.planMenu();
         //Покупка
-        $("div.buyer__outer-container").find(byText("Купить продукты и товары для дома " +
-                "в магазине")).hover();
-        $("div.buyer__outer-container").find(byText("Покупка")).click();
-        Selenide.back();
-
+        workPage.buyingMenu();
         //Доставка
-        $("div.buyer__outer-container").find(byText("Заказать продукты и готовые блюда с доставкой" +
-                " на дом")).hover();
-        $("div.buyer__outer-container").find(byText("Доставка")).click();
-        Selenide.back();
-
+        workPage.deliveryMenu();
         //Сервисы
-        $("div.buyer__outer-container").find(byText("Дополнительные сервисы для комфортных " +
-                "и выгодных покупок")).hover();
-        $("div.buyer__outer-container").find(byText("Сервисы")).click();
-        Selenide.back();
-
-
+        workPage.serviceMenu();
         //Партнерам
-        $("div.corporate-block").find(byText("Как получить доступ к миллионам клиентов по всей " +
-                "стране и другие возможности сотрудничества")).hover();
-        $("div.corporate-block").find(byText("Партнерам")).click();
-
-        switchTo().window(0);
-
-
+        workPage.partnersMenu();
         //Инвесторам
-        $("div.corporate-block").find(byText("Темпы роста, развитие форматов и цифровых бизнесов " +
-                "и другие данные для оценки эффективности компании")).hover();
-        $("div.corporate-block").find(byText("Инвесторам")).click();
-        Selenide.back();
-        switchTo().window(1).close();
+        workPage.investorsMenu();
 
     }
 
@@ -80,25 +42,19 @@ public class X5GroupTest {
     @Tag("Search")
     void headerSearchTest() {
 
-      //  Configuration.holdBrowserOpen = true;
-
-        open("https://www.x5.ru/ru/");
-        $("div.cookie-consent__button-group").find(byText("Принять")).click();
-
-        $("div.hero-main__logo").find(byText("Выбор в пользу будущего"));
+        workPage.openPage();
 
         //Поиск
         //Поиск из главной стр
-        $("div.header-search").click();
-        $(".header-search__term").click();
-        $(".header-search__term").setValue("география").pressEnter();
-        $(".search-form__clear-btn").click();
+        workPage.searchFromMainPage("география");
         //поиск из раздела Результаты
-        $(".search-form__term").setValue("X5 Group");
-        $(".search-form__type-cnt").find(byText("по дате")).click();
-        $("div.search-form__buttons").find(byText("Найти")).click();
-        $(".header__logo").click();
+        workPage.searchFromResultPage("X5 Group");
+        // Тип поиска
+        workPage.searchFromResultPageView("по дате");
+        workPage.searchResult();
 
+        //Переход на глав стр
+        workPage.goToMainPage();
     }
 
     static Stream<Arguments> menuContain() {
@@ -128,39 +84,29 @@ public class X5GroupTest {
             List<String> buttons
     ) {
 
-       // Configuration.holdBrowserOpen = true;
-
-        open("https://www.x5.ru/ru/");
-
-        $(".header__content-menu").find(withText(contain.name())).hover();
-        $$("ul.header__sub-menu-container").shouldHave(texts(buttons));
-
+        workPage.openOnlyPage();
+        workPage.parameterMenu(contain.name(), buttons);
     }
 
     @Test
     @Tag("Feedback")
     void FeedBackEmployee() {
 
-       // Configuration.holdBrowserOpen = true;
+        // Configuration.holdBrowserOpen = true;
 
-        open("https://www.x5.ru/ru/");
+        //проверка Я сотрудник
+        workPage.openPage();
 
-        $("div.cookie-consent__button-group").find(byText("Принять")).click();
+        workPage.clickOnSelectRole();
 
-        $(".feedback").$(".feedback__content").hover();
-        $(".custom-select").shouldHave(text("Выберите роль"));
-        $(".css-1n9v7xy").click();
-        $("#react-select-2-listbox").find(byText("Я сотрудник")).click();
-        $$(".feedback__content").find(text("Далее")).hover();
-        $$(".button__inner").find(text("Далее")).click();
+        workPage.clickOnEmployee();
+        workPage.clickOnEmployeeAndNext();
         switchTo().window(1);
-        $("div.hlf-table").find(byText("Я сотрудник")).click();
+        workPage.whoIAm("Я сотрудник");
         sleep(500);
-        $("div.hlf-table").find(byText("Я бывший сотрудник")).click();
+        workPage.whoIAm("Я бывший сотрудник");
         sleep(500);
-        $("div.hlf-table").find(byText("Я не сотрудник")).click();
-
+        workPage.whoIAm("Я не сотрудник");
 
     }
-
 }
