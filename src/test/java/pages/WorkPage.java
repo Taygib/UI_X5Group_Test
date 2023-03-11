@@ -22,6 +22,7 @@ public class WorkPage {
 
     public void openPage() {
         open("https://www.x5.ru/ru/");
+        sleep(500);
         $("div.cookie-consent__button-group").find(byText("Принять")).click();
         $("div.hero-main__logo").find(byText("Выбор в пользу будущего"));
     }
@@ -102,10 +103,11 @@ public class WorkPage {
         $(".feedback").$(".feedback__content").hover();
         $(".custom-select").shouldHave(text("Выберите роль"));
         $(".css-1n9v7xy").click();
+        sleep(500);
     }
 
     public void clickOnEmployee() {
-        $("#react-select-2-listbox").find(byText("Я сотрудник")).click();
+        $(".css-o7koal-menu").find(byText("Я сотрудник")).click();
     }
 
     public void clickOnEmployeeAndNext() {

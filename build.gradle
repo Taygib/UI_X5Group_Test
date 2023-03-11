@@ -17,6 +17,13 @@ allure {
         }
     }
 }
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+compileJava.options.encoding = 'UTF-8'
 
 group 'org.example'
 version '1.0-SNAPSHOT'
@@ -27,12 +34,37 @@ repositories {
 
 dependencies {
     testImplementation(
-            "com.codeborne:selenide:6.3.5",
+            //'com.codeborne:selenide:6.3.5',
+            'com.codeborne:selenide:6.12.2',
             "org.junit.jupiter:junit-jupiter:5.9.1",
-            "org.slf4j:slf4j-simple:2.0.6"
+            "org.slf4j:slf4j-simple:2.0.6",
+            'io.qameta.allure:allure-selenide:2.21.0'
     )
 }
 
 test {
     useJUnitPlatform()
+}
+task testMainPage(type: Test) {
+    useJUnitPlatform() {
+        includeTags("mainTest")
+    }
+}
+
+task searchTest(type: Test) {
+    useJUnitPlatform() {
+        includeTags("Search")
+    }
+}
+
+task menuContainTest(type: Test) {
+    useJUnitPlatform() {
+        includeTags("Menu")
+    }
+}
+
+task feedbackTest(type: Test) {
+    useJUnitPlatform() {
+        includeTags("Feedback")
+    }
 }

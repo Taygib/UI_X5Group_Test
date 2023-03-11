@@ -13,7 +13,10 @@ import pages.WorkPage;
 import java.util.List;
 import java.util.stream.Stream;
 
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.open;
+import static io.qameta.allure.Allure.step;
 
 public class X5GroupTest extends TestBase {
 
@@ -21,40 +24,62 @@ public class X5GroupTest extends TestBase {
     @Tag("mainTest")
     void mainPageTest() {
 
-        // Configuration.holdBrowserOpen = true;
-        workPage.openPage();
-        //Планирование
-        workPage.planMenu();
-        //Покупка
-        workPage.buyingMenu();
-        //Доставка
-        workPage.deliveryMenu();
-        //Сервисы
-        workPage.serviceMenu();
-        //Партнерам
-        workPage.partnersMenu();
-        //Инвесторам
-        workPage.investorsMenu();
+        step("Открыть страницу", () -> {
+            workPage.openPage();
+        });
 
+        step("Открыть раздел планирование", () -> {
+            workPage.planMenu();
+        });
+
+        step("Открыть раздел покупка", () -> {
+            workPage.buyingMenu();
+        });
+
+        step("Открыть раздел доставка", () -> {
+            workPage.deliveryMenu();
+        });
+
+        step("Открыть раздел сервисы", () -> {
+            workPage.serviceMenu();
+        });
+
+        step("Открыть раздел партнерам", () -> {
+            workPage.partnersMenu();
+        });
+
+        step("Открыть раздел инвесторам", () -> {
+            workPage.investorsMenu();
+        });
     }
 
     @Test
     @Tag("Search")
     void headerSearchTest() {
 
-        workPage.openPage();
+        step("Открыть страницу", () -> {
+            workPage.openPage();
+        });
 
-        //Поиск
-        //Поиск из главной стр
-        workPage.searchFromMainPage("география");
-        //поиск из раздела Результаты
-        workPage.searchFromResultPage("X5 Group");
-        // Тип поиска
-        workPage.searchFromResultPageView("по дате");
-        workPage.searchResult();
+        step("Поиск из главной стр", () -> {
+            workPage.searchFromMainPage("география");
+        });
 
-        //Переход на глав стр
-        workPage.goToMainPage();
+        step("Поиск из раздела результаты", () -> {
+            workPage.searchFromResultPage("X5 Group");
+        });
+
+        step("Тип поиска", () -> {
+            workPage.searchFromResultPageView("по дате");
+        });
+
+        step("Поиск", () -> {
+            workPage.searchResult();
+        });
+
+        step("Переход на главную страницу", () -> {
+            workPage.goToMainPage();
+        });
     }
 
     static Stream<Arguments> menuContain() {
@@ -83,30 +108,47 @@ public class X5GroupTest extends TestBase {
             ContentMenu contain,
             List<String> buttons
     ) {
+        step("Открыть страницу", () -> {
+            workPage.openOnlyPage();
+        });
 
-        workPage.openOnlyPage();
-        workPage.parameterMenu(contain.name(), buttons);
+        step("Проверка меню на содежания", () -> {
+            workPage.parameterMenu(contain.name(), buttons);
+        });
     }
 
     @Test
     @Tag("Feedback")
     void FeedBackEmployee() {
 
-        // Configuration.holdBrowserOpen = true;
+        step("Открыть страницу", () -> {
+            workPage.openPage();
+        });
 
-        //проверка Я сотрудник
-        workPage.openPage();
+        step("Выбрать роль", () -> {
+            workPage.clickOnSelectRole();
+            workPage.clickOnEmployee();
+            workPage.clickOnEmployeeAndNext();
+        });
 
-        workPage.clickOnSelectRole();
-
-        workPage.clickOnEmployee();
-        workPage.clickOnEmployeeAndNext();
         switchTo().window(1);
-        workPage.whoIAm("Я сотрудник");
-        sleep(500);
-        workPage.whoIAm("Я бывший сотрудник");
-        sleep(500);
-        workPage.whoIAm("Я не сотрудник");
 
+        step("Выбрать пункт Я сотрудник", () -> {
+            workPage.whoIAm("Я сотрудник");
+        });
+
+        sleep(500);
+
+        step("Выбрать пункт Я бывший сотрудник", () -> {
+            workPage.whoIAm("Я бывший сотрудник");
+        });
+
+        sleep(500);
+
+        step("Выбрать пункт Я не сотрудник", () -> {
+            workPage.whoIAm("Я не сотрудник");
+        });
+
+        switchTo().window(1).close();
     }
 }

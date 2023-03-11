@@ -22,10 +22,11 @@ import static com.codeborne.selenide.Selenide.*;
 public class X5GroupTestStart {
 
     @Test
-    @Tag("mainTest")
+    @Tag("mainTest1")
     void mainPageTest() {
 
-        Configuration.holdBrowserOpen = true;
+        //Configuration.browser = "opera";
+       // Configuration.holdBrowserOpen = true;
 
 
         open("https://www.x5.ru/ru/");
@@ -75,7 +76,7 @@ public class X5GroupTestStart {
     }
 
     @Test
-    @Tag("Search")
+    @Tag("Search1")
     void headerSearchTest() {
 
       //  Configuration.holdBrowserOpen = true;
@@ -119,7 +120,7 @@ public class X5GroupTestStart {
 
     @MethodSource
     @ParameterizedTest
-    @Tag("Menu")
+    @Tag("Menu1")
     void menuContain(
 
             ContentMenu contain,
@@ -136,7 +137,7 @@ public class X5GroupTestStart {
     }
 
     @Test
-    @Tag("Feedback")
+    @Tag("Feedback1")
     void FeedBackEmployee() {
 
        // Configuration.holdBrowserOpen = true;
