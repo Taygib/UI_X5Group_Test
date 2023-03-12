@@ -159,6 +159,7 @@ public class X5GroupTestStart {
         sleep(500);
         $("div.hlf-table").find(byText("Я не сотрудник")).click();
 
+        // switchTo().window(1).close();
 
     }
 

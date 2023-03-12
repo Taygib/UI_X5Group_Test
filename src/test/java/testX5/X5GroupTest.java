@@ -148,7 +148,5 @@ public class X5GroupTest extends TestBase {
         step("Выбрать пункт Я не сотрудник", () -> {
             workPage.whoIAm("Я не сотрудник");
         });
-
-        switchTo().window(1).close();
     }
 }

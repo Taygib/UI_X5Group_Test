@@ -10,8 +10,11 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverRunner.driver;
+
 
 public class WorkPage {
+
     private SelenideElement
             buyerOuterContainer = $("div.buyer__outer-container"),
             corporateBlock = $("div.corporate-block");
@@ -31,6 +34,8 @@ public class WorkPage {
         buyerOuterContainer.find(byText("Найти рецепт и подобрать ингредиенты")).hover();
         buyerOuterContainer.find(byText("Планирование")).click();
         Selenide.back();
+
+
     }
 
     public void buyingMenu() {
@@ -44,7 +49,7 @@ public class WorkPage {
         buyerOuterContainer.find(byText("Заказать продукты и готовые блюда с доставкой" +
                 " на дом")).hover();
         buyerOuterContainer.find(byText("Доставка")).click();
-        Selenide.back();
+       Selenide.back();
     }
 
     public void serviceMenu() {
@@ -58,7 +63,8 @@ public class WorkPage {
         corporateBlock.find(byText("Как получить доступ к миллионам клиентов по всей " +
                 "стране и другие возможности сотрудничества")).hover();
         corporateBlock.find(byText("Партнерам")).click();
-        switchTo().window(0);
+        sleep(1500);
+       switchTo().window(0);
     }
 
     public void investorsMenu() {
@@ -66,7 +72,7 @@ public class WorkPage {
                 "и другие данные для оценки эффективности компании")).hover();
         corporateBlock.find(byText("Инвесторам")).click();
         Selenide.back();
-        switchTo().window(1).close();
+       // switchTo().window(1).close();
     }
 
     public void searchFromMainPage(String value) {
@@ -107,7 +113,7 @@ public class WorkPage {
     }
 
     public void clickOnEmployee() {
-        $(".css-o7koal-menu").find(byText("Я сотрудник")).click();
+        $("#react-select-2-listbox").find(byText("Я сотрудник")).click();
     }
 
     public void clickOnEmployeeAndNext() {
