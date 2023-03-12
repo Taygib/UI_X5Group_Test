@@ -21,6 +21,7 @@ import static io.qameta.allure.Allure.step;
 public class X5GroupTest extends TestBase {
 
     @Test
+    @Tag("test")
     @Tag("mainTest")
     void mainPageTest() {
 
@@ -54,6 +55,7 @@ public class X5GroupTest extends TestBase {
     }
 
     @Test
+    @Tag("test")
     @Tag("Search")
     void headerSearchTest() {
 
@@ -102,6 +104,7 @@ public class X5GroupTest extends TestBase {
 
     @MethodSource
     @ParameterizedTest
+    @Tag("test")
     @Tag("Menu")
     void menuContain(
 
@@ -118,6 +121,7 @@ public class X5GroupTest extends TestBase {
     }
 
     @Test
+    @Tag("test")
     @Tag("Feedback")
     void FeedBackEmployee() {
 
