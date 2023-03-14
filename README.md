@@ -46,7 +46,7 @@
 
 ### Видео теста
 
-
+<video src="https://user-images.githubusercontent.com/105595414/225122657-60f841f9-0216-4920-83ca-64c76e8905ca.mp4"></video>
 
 <h2> №5 прогон всех тестов сразу </h2>
 
@@ -55,4 +55,6 @@
 |![test №5 AllTests1-2.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests1-2.png)|![test №5 AllTests2 Telegram.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests2%20Telegram.png)|
 
 ### Видео теста
+
+<video src="https://user-images.githubusercontent.com/105595414/225123438-4ff1c8a5-2858-4dd2-b754-a9984357eaa2.mp4"></video>
 
