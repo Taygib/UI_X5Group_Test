@@ -4,15 +4,15 @@
 
 <h2>  Cтек </h2>
 <p align="center">
-  <img width="6%" title="IDEA" src=https://user-images.githubusercontent.com/105595414/225144124-d3330295-06d4-4e08-83cb-5480cb547ca9.png> 
-  <img width="6%" title="Selenide" src=https://user-images.githubusercontent.com/105595414/225147534-b74af3ad-ebd2-4205-89b9-f632adf939e2.png>
-  <img width="6%" title="Selenoid" src=https://user-images.githubusercontent.com/105595414/225148009-310bea36-6d37-4181-99a7-67773b73e723.png>
+  <img width="6%" title="IDEA" src="materials/pictures/IDEA.png"> 
+  <img width="6%" title="Selenide" src="materials/pictures/Selenide.png">
+  <img width="6%" title="Selenoid" src="materials/pictures/Selenoid.png">
   <img width="6%" title="Gradle" src="materials/pictures/Gradle.png">
   <img width="6%" title="Allure Report" src="materials/pictures/Allure Report.png" >
   <img width="6%" title="GitHub" src="materials/pictures/GitHub.png"> 
-  <img width="6%" title="Telegram" src=https://user-images.githubusercontent.com/105595414/225148343-ba6037fd-5352-4ea3-96ea-b7220f43934e.png>
-  <img width="6%" title="Jenkins" src=https://user-images.githubusercontent.com/105595414/225146750-659b7684-3d39-4d35-84d2-7059209d5da1.png> 
-  <img width="6%" title="Java" src=https://user-images.githubusercontent.com/105595414/225145810-d34fae5d-eb3b-4589-aeaf-448721b8a5a2.png>
+  <img width="6%" title="Telegram" src="materials/pictures/Telegram.png">
+  <img width="6%" title="Jenkins" src="materials/pictures/Jenkins.png"> 
+  <img width="6%" title="Java" src="materials/pictures/Java.png">
 </p>
 
 <h2>  Старт запуска в Jenkins </h2>
