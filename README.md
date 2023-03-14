@@ -30,9 +30,11 @@
 
 <h2> №3 Тест содержания меню </h2>
 
-|   картинка   | картинка |
-|:------------:|:--------:|
-| картинка  |  видео   |
+| ![test №3 menuContain.png](materials%2Fscreens%2Ftest%20%E2%84%963%20menuContain.png)  | ![test №3 menuContain1.png](materials%2Fscreens%2Ftest%20%E2%84%963%20menuContain1.png) |
+|:-----------------------------------------------------------------------------------------------------------:|:--------:|
+| ![test №3 menuContain2 Telegram.png](materials%2Fscreens%2Ftest%20%E2%84%963%20menuContain2%20Telegram.png) |    |
+
+### Видео теста
 
 <h2> №4 Тест обратной связи сотрудника </h2>
 
