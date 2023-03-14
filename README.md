@@ -7,9 +7,9 @@
   <img width="6%" title="IDEA" src=https://user-images.githubusercontent.com/105595414/225144124-d3330295-06d4-4e08-83cb-5480cb547ca9.png> 
   <img width="6%" title="Selenide" src=https://user-images.githubusercontent.com/105595414/225147534-b74af3ad-ebd2-4205-89b9-f632adf939e2.png>
   <img width="6%" title="Selenoid" src=https://user-images.githubusercontent.com/105595414/225148009-310bea36-6d37-4181-99a7-67773b73e723.png>
-  <img width="6%" title="Gradle" src=https://user-images.githubusercontent.com/105595414/225143117-01cc207c-468a-464d-8e59-8db134c632cb.png >
-  <img width="6%" title="Allure Report" src=https://user-images.githubusercontent.com/105595414/225142225-0706f5bb-ed40-40a6-8ba8-48cf8f4fc612.png >
-  <img width="6%" title="GitHub" src=https://user-images.githubusercontent.com/105595414/225140692-020dc586-a484-4b51-9914-fedb1614e238.png > 
+  <img width="6%" title="Gradle" src="materials/pictures/Gradle.png">
+  <img width="6%" title="Allure Report" src="materials/pictures/Allure Report.png" >
+  <img width="6%" title="GitHub" src="materials/pictures/GitHub.png"> 
   <img width="6%" title="Telegram" src=https://user-images.githubusercontent.com/105595414/225148343-ba6037fd-5352-4ea3-96ea-b7220f43934e.png>
   <img width="6%" title="Jenkins" src=https://user-images.githubusercontent.com/105595414/225146750-659b7684-3d39-4d35-84d2-7059209d5da1.png> 
   <img width="6%" title="Java" src=https://user-images.githubusercontent.com/105595414/225145810-d34fae5d-eb3b-4589-aeaf-448721b8a5a2.png>
@@ -18,7 +18,7 @@
 <h2>  Старт запуска в Jenkins </h2>
 
 <img title="Jenkins Build" src="https://github.com/Taygib/X5Group_Test/blob/FiveTests/materials/screens/Jenkins%20Start.png?raw=true">
-
+  <img width="6%" title="IDEA" src=https://user-images.githubusercontent.com/105595414/225144124-d3330295-06d4-4e08-83cb-5480cb547ca9.png>
 
 <h2> №1 Тест главной страницы </h2>
 
