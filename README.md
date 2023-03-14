@@ -40,12 +40,19 @@
 
 <h2> №4 Тест обратной связи сотрудника </h2>
 
-|||
+|![test №4 FeedBackEmployee.png](materials%2Fscreens%2Ftest%20%E2%84%964%20FeedBackEmployee.png)|![test №4 FeedBackEmployee1.png](materials%2Fscreens%2Ftest%20%E2%84%964%20FeedBackEmployee1.png)|
 |:---:|:---:|
-|||
+|![test №4 FeedBackEmployee2 Telegram.png](materials%2Fscreens%2Ftest%20%E2%84%964%20FeedBackEmployee2%20Telegram.png)||
+
+### Видео теста
+
+
 
 <h2> №5 прогон всех тестов сразу </h2>
 
-|||
+|![test №5 AllTests.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests.png)|![test №5 AllTests1-1.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests1-1.png)|
 |:---:|:---:|
-|||
+|![test №5 AllTests1-2.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests1-2.png)|![test №5 AllTests2 Telegram.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests2%20Telegram.png)|
+
+### Видео теста
+
