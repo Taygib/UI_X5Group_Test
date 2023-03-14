@@ -4,7 +4,15 @@
 
 <h2>  Cтек </h2>
 
-  ![IDEA.png](materials%2Fpictures%2FIDEA.png) ![Selenide.png](materials%2Fpictures%2FSelenide.png) ![Selenoid.png](materials%2Fpictures%2FSelenoid.png) ![Gradle.png](materials%2Fpictures%2FGradle.png) ![Allure Report.png](materials%2Fpictures%2FAllure%20Report.png) ![GitHub.png](materials%2Fpictures%2FGitHub.png) ![Telegram.png](materials%2Fpictures%2FTelegram.png) ![Jenkins.png](materials%2Fpictures%2FJenkins.png) ![Java.png](materials%2Fpictures%2FJava.png)
+  ![IDEA.png](materials%2Fpictures%2FIDEA.png) 
+  ![Selenide.png](materials%2Fpictures%2FSelenide.png) 
+  ![Selenoid.png](materials%2Fpictures%2FSelenoid.png) 
+  ![Gradle.png](materials%2Fpictures%2FGradle.png)
+  ![Allure Report.png](materials%2Fpictures%2FAllure%20Report.png)
+  ![GitHub.png](materials%2Fpictures%2FGitHub.png) 
+  ![Telegram.png](materials%2Fpictures%2FTelegram.png)
+  ![Jenkins.png](materials%2Fpictures%2FJenkins.png) 
+  ![Java.png](materials%2Fpictures%2FJava.png)
 
 
 <h2>  Старт запуска в Jenkins </h2>
