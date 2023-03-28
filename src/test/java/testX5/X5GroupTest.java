@@ -1,156 +1,146 @@
 package testX5;
 
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
 import data.ContentMenu;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import pages.WorkPage;
 
 import java.util.List;
 import java.util.stream.Stream;
 
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 public class X5GroupTest extends TestBase {
 
     @Test
-    @Tag("test")
+    @Tag("Group")
     @Tag("mainTest")
     void mainPageTest() {
 
         step("Открыть страницу", () -> {
-            workPage.openPage();
+            mainPage.openPage();
         });
 
         step("Открыть раздел планирование", () -> {
-            workPage.planMenu();
+            mainPage.planMenu();
         });
 
         step("Открыть раздел покупка", () -> {
-            workPage.buyingMenu();
+            mainPage.buyingMenu();
         });
 
         step("Открыть раздел доставка", () -> {
-            workPage.deliveryMenu();
+            mainPage.deliveryMenu();
         });
 
         step("Открыть раздел сервисы", () -> {
-            workPage.serviceMenu();
+            mainPage.serviceMenu();
         });
 
         step("Открыть раздел партнерам", () -> {
-            workPage.partnersMenu();
+            mainPage.partnersMenu();
         });
 
         step("Открыть раздел инвесторам", () -> {
-            workPage.investorsMenu();
+            mainPage.investorsMenu();
         });
     }
 
     @Test
-    @Tag("test")
+    @Tag("Group")
     @Tag("Search")
     void headerSearchTest() {
 
         step("Открыть страницу", () -> {
-            workPage.openPage();
+            headerSearchPage.openPage();
         });
 
         step("Поиск из главной стр", () -> {
-            workPage.searchFromMainPage("география");
+            headerSearchPage.searchFromMainPage("география");
         });
 
         step("Поиск из раздела результаты", () -> {
-            workPage.searchFromResultPage("X5 Group");
+            headerSearchPage.searchFromResultPage("X5 Group");
         });
 
         step("Тип поиска", () -> {
-            workPage.searchFromResultPageView("по дате");
+            headerSearchPage.searchFromResultPageView("по дате");
         });
 
         step("Поиск", () -> {
-            workPage.searchResult();
+            headerSearchPage.searchResult();
         });
 
         step("Переход на главную страницу", () -> {
-            workPage.goToMainPage();
+            headerSearchPage.goToMainPage();
         });
     }
 
     static Stream<Arguments> menuContain() {
         return Stream.of(
-                Arguments.of(ContentMenu.Компания, List.of("История компании" + "\n" + "География" +
-                        "\n" + "Деловая этика" + "\n" + "Стратегия устойчивого развития", "", "", "")),
-                Arguments.of(ContentMenu.Партнерам, List.of("", "Добросовестное партнёрство" + "\n" + "Поставщикам"
-                        + "\n" + "Сервисы для поставщиков" + "\n" + "Маркетинговые возможности" + "\n" + "Стать франчайзи"
-                        + "\n" + "X5 Transport" + "\n" + "Операции с недвижимостью" + "\n" + "X5 Import" +
-                        "\n" + "X5 Ready Food" + "\n" + "Закупки для собственных нужд X5 Group", "", "")),
-                Arguments.of(ContentMenu.Инвесторам, List.of("", "", "Отчёты и результаты" + "\n"
-                        + "Акции" + "\n" + "Долговые инструменты" + "\n" + "Корпоративное управление" +
-                        "\n" + "Кредитные рейтинги" + "\n" + "Частным инвесторам" +
-                        "\n" + "Календарь инвестора" + "\n" + "ESG", "")),
-                Arguments.of(ContentMenu.Пресс, List.of("", "", "", "Пресс-релизы" + "\n" + "Интервью" +
-                        "\n" + "Индекс «Пятёрочки»" + "\n" + "Фотобанк" + "\n" + "Фирменный стиль X5 Group" +
-                        "\n" + "Контакты для прессы"))
+                Arguments.of(ContentMenu.COMPANY, List.of(
+                        "История компании", "География", "Деловая этика", "Стратегия устойчивого развития")),
+                Arguments.of(ContentMenu.PARTNERS, List.of(
+                        "Добросовестное партнёрство", "Поставщикам", "Сервисы для поставщиков",
+                        "Маркетинговые возможности", "Стать франчайзи", "X5 Transport",
+                        "Операции с недвижимостью", "X5 Import", "X5 Ready Food",
+                        "Закупки для собственных нужд X5 Group")),
+                Arguments.of(ContentMenu.INVESTORS, List.of("Отчёты и результаты", "Акции", "Долговые инструменты",
+                        "Корпоративное управление", "Кредитные рейтинги", "Частным инвесторам",
+                        "Календарь инвестора", "ESG")),
+                Arguments.of(ContentMenu.PRESS, List.of("Пресс-релизы", "Интервью", "Индекс «Пятёрочки»",
+                        "Фотобанк", "Фирменный стиль X5 Group", "Контакты для прессы"))
         );
     }
 
     @MethodSource
     @ParameterizedTest
-    @Tag("test")
+    @Tag("Group")
     @Tag("Menu")
-    void menuContain(
-
-            ContentMenu contain,
-            List<String> buttons
-    ) {
+    void menuContain(ContentMenu menuSection, List<String> expectedButtons) {
         step("Открыть страницу", () -> {
-            workPage.openOnlyPage();
+            menuContainPage.openOnlyPage();
         });
 
         step("Проверка меню на содежания", () -> {
-            workPage.parameterMenu(contain.name(), buttons);
+            menuContainPage.parameterMenu(menuSection.toString(), expectedButtons);
         });
     }
 
     @Test
-    @Tag("test")
+    @Tag("Group")
     @Tag("Feedback")
-    void FeedBackEmployee() {
+    void feedBackEmployee() {
 
         step("Открыть страницу", () -> {
-            workPage.openPage();
+            feedBackPage.openPage();
         });
 
         step("Выбрать роль", () -> {
-            workPage.clickOnSelectRole();
-            workPage.clickOnEmployee();
-            workPage.clickOnEmployeeAndNext();
+            feedBackPage.clickOnSelectRole();
+            feedBackPage.clickOnEmployee();
+            feedBackPage.clickOnEmployeeAndNext();
         });
 
         switchTo().window(1);
 
         step("Выбрать пункт Я сотрудник", () -> {
-            workPage.whoIAm("Я сотрудник");
+            feedBackPage.whoIAm("Я сотрудник");
         });
 
         sleep(500);
 
         step("Выбрать пункт Я бывший сотрудник", () -> {
-            workPage.whoIAm("Я бывший сотрудник");
+            feedBackPage.whoIAm("Я бывший сотрудник");
         });
 
         sleep(500);
 
         step("Выбрать пункт Я не сотрудник", () -> {
-            workPage.whoIAm("Я не сотрудник");
+            feedBackPage.whoIAm("Я не сотрудник");
         });
     }
 }

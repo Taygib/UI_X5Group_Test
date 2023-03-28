@@ -100,6 +100,7 @@ public class X5GroupTestStart {
 
     }
 
+          /*fgfg
     static Stream<Arguments> menuContain() {
         return Stream.of(
                 Arguments.of(ContentMenu.Компания, List.of("История компании" + "\n" + "География" +
@@ -135,7 +136,7 @@ public class X5GroupTestStart {
         $$("ul.header__sub-menu-container").shouldHave(texts(buttons));
 
     }
-
+*/
     @Test
     @Tag("Feedback1")
     void FeedBackEmployee() {

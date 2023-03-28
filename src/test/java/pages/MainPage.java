@@ -1,28 +1,18 @@
 package pages;
 
-import com.codeborne.selenide.*;
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideElement;
 
-import java.util.List;
-
-import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.switchTo;
 
-
-public class WorkPage {
-/*
+public class MainPage {
     private SelenideElement
             buyerOuterContainer = $("div.buyer__outer-container"),
             corporateBlock = $("div.corporate-block");
 
-    public void openOnlyPage() {
-        Configuration.baseUrl = System.getProperty("baseUrl", "https://www.x5.ru/");
-        open("ru/");
-    }
-
     public void openPage() {
-        Configuration.baseUrl = System.getProperty("baseUrl", "https://www.x5.ru/");
         open("ru/");
         sleep(500);
         $("div.cookie-consent__button-group").find(byText("Принять")).click();
@@ -33,8 +23,6 @@ public class WorkPage {
         buyerOuterContainer.find(byText("Найти рецепт и подобрать ингредиенты")).hover();
         buyerOuterContainer.find(byText("Планирование")).click();
         Selenide.back();
-
-
     }
 
     public void buyingMenu() {
@@ -73,56 +61,4 @@ public class WorkPage {
         Selenide.back();
         // switchTo().window(1).close();
     }
------------------------
-    public void searchFromMainPage(String value) {
-        $("div.header-search").click();
-        $(".header-search__term").click();
-        $(".header-search__term").setValue(value).pressEnter();
-
-    }
-
-    public void searchFromResultPage(String value) {
-        $(".search-form__clear-btn").click();
-        $(".search-form__term").setValue(value);
-    }
-
-    public void searchFromResultPageView(String value) {
-        $(".search-form__type-cnt").find(byText(value)).click();
-
-    }
-
-    public void searchResult() {
-        $("div.search-form__buttons").find(byText("Найти")).click();
-    }
-
-    public void goToMainPage() {
-        $(".header__logo").click();
-    }
-
-    public void parameterMenu(String value, List<String> expectedButtons) {
-        $(".header__content-menu").find(withText(value)).hover();
-        $$(".header__sub-menu-container > li").shouldHave(CollectionCondition.containExactTextsCaseSensitive(expectedButtons));
-    }
-
-    public void clickOnSelectRole() {
-        $(".feedback").$(".feedback__content").hover();
-        $(".custom-select").shouldHave(text("Выберите роль"));
-        $(".css-1n9v7xy").click();
-        sleep(500);
-    }
-
-    public void clickOnEmployee() {
-        $("#react-select-2-listbox").find(byText("Я сотрудник")).click();
-    }
-
-    public void clickOnEmployeeAndNext() {
-        $$(".feedback__content").find(text("Далее")).hover();
-        $$(".button__inner").find(text("Далее")).click();
-    }
-
-    public void whoIAm(String value) {
-        $("div.hlf-table").find(byText(value)).click();
-    }
-    */
-
 }

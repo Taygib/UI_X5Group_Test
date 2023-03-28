@@ -1,8 +1,19 @@
 package data;
 
 public enum ContentMenu {
-    Компания,
-    Партнерам,
-    Инвесторам,
-    Пресс,
+    COMPANY("Компания"),
+    PARTNERS("Партнерам"),
+    INVESTORS("Инвесторам"),
+    PRESS("Пресс");
+
+    private final String title;
+
+    ContentMenu(String title) {
+        this.title = title;
+    }
+
+    @Override
+    public String toString() {
+        return title;
+    }
 }
