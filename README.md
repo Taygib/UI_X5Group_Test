@@ -69,9 +69,6 @@
 |:-----------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------:|
 | <img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" >  Allure![test №5 AllTests1-2.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests1-2.png)   |<img width="5%" title="Telegram" src="materials/pictures/Telegram.png"> Telegram![test №5 AllTests2 Telegram.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests2%20Telegram.png) |
 
-### <img width="5%" title="Selenoid" src="materials/pictures/Selenoid.png"> Видео теста на Selenoid
-
-<video src="https://user-images.githubusercontent.com/105595414/225123438-4ff1c8a5-2858-4dd2-b754-a9984357eaa2.mp4"></video>
 
 ### <img width="6%" title="Gradle" src="materials/pictures/Gradle.png"> Gradle
 ```
@@ -144,9 +141,9 @@ task feedbackTest(type: Test) {
         includeTags("Feedback")
     }
 }
-task Test(type: Test) {
+task Alltests(type: Test) {
     useJUnitPlatform() {
-        includeTags("test")
+        includeTags("Group")
     }
 }
 ```
