@@ -19,7 +19,6 @@ public class X5GroupTest extends TestBase {
     @Tag("Group")
     @Tag("mainTest")
     void mainPageTest() {
-
         step("Открыть страницу", () -> {
             mainPage.openPage();
         });
@@ -53,7 +52,6 @@ public class X5GroupTest extends TestBase {
     @Tag("Group")
     @Tag("Search")
     void headerSearchTest() {
-
         step("Открыть страницу", () -> {
             headerSearchPage.openPage();
         });
@@ -114,7 +112,6 @@ public class X5GroupTest extends TestBase {
     @Tag("Group")
     @Tag("Feedback")
     void feedBackEmployee() {
-
         step("Открыть страницу", () -> {
             feedBackPage.openPage();
         });

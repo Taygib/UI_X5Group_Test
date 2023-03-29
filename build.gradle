@@ -68,7 +68,7 @@ task feedbackTest(type: Test) {
         includeTags("Feedback")
     }
 }
-task Test(type: Test) {
+task Alltests(type: Test) {
     useJUnitPlatform() {
         includeTags("Group")
     }
