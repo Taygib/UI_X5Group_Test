@@ -7,7 +7,6 @@ public class HeaderSearchPage {
 
     public void openPage() {
         open("ru/");
-      //  sleep(500);
         $("div.cookie-consent__button-group").find(byText("Принять")).click();
         $("div.hero-main__logo").find(byText("Выбор в пользу будущего"));
     }
@@ -16,7 +15,6 @@ public class HeaderSearchPage {
         $("div.header-search").click();
         $(".header-search__term").click();
         $(".header-search__term").setValue(search).pressEnter();
-
     }
 
     public void searchFromResultPage(String fromResult) {
@@ -26,7 +24,6 @@ public class HeaderSearchPage {
 
     public void searchFromResultPageView(String view) {
         $(".search-form__type-cnt").find(byText(view)).click();
-
     }
 
     public void searchResult() {

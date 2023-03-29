@@ -13,12 +13,7 @@ import pages.*;
 
 import java.util.Map;
 
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.$;
-
 public class TestBase {
-    WorkPage workPage = new WorkPage();
     MainPage mainPage = new MainPage();
     HeaderSearchPage headerSearchPage = new HeaderSearchPage();
     MenuContainPage menuContainPage = new MenuContainPage();
@@ -36,11 +31,8 @@ public class TestBase {
                 "enableVNC", true,
                 "enableVideo", true
         ));
-
         Configuration.browserCapabilities = capabilities;
-
         Configuration.baseUrl = System.getProperty("baseUrl", "https://www.x5.ru/");
-
     }
 
     @BeforeEach
