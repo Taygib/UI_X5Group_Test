@@ -67,7 +67,7 @@
 
 |      <img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" > Allure![test №5 AllTests.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests.png)      |      <img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" >    Allure![test №5 AllTests1-1.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests1-1.png)          |
 |:-----------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------:|
-| <img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" >  Allure![test №5 AllTests1-2.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests1-2.png)   |<img width="5%" title="Telegram" src="materials/pictures/Telegram.png"> Telegram![test №5 AllTests2 Telegram.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests2%20Telegram.png) |
+|   <img width="5%" title="Telegram" src="materials/pictures/Telegram.png"> Telegram![test №5 AllTests2 Telegram.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests2%20Telegram.png) | |
 
 
 ### <img width="6%" title="Gradle" src="materials/pictures/Gradle.png"> Gradle
