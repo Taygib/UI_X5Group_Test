@@ -42,16 +42,6 @@ public class TestBase {
         Configuration.baseUrl = System.getProperty("baseUrl", "https://www.x5.ru/");
 
     }
-  //  @BeforeAll
-  //  static void openPage() {
-  //      Configuration.baseUrl = System.getProperty("baseUrl", "https://www.x5.ru/");
-  //      open("ru/");
-  //      sleep(500);
-  //      $("div.cookie-consent__button-group").find(byText("Принять")).click();
-  //      $("div.hero-main__logo").find(byText("Выбор в пользу будущего"));
-//
-//
-  //  }
 
     @BeforeEach
     void addListener() {

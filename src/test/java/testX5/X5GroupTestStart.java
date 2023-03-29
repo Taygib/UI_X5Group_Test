@@ -20,7 +20,7 @@ import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class X5GroupTestStart {
-
+/*
     @Test
     @Tag("mainTest1")
     void mainPageTest() {
@@ -136,7 +136,7 @@ public class X5GroupTestStart {
         $$("ul.header__sub-menu-container").shouldHave(texts(buttons));
 
     }
-*/
+
     @Test
     @Tag("Feedback1")
     void FeedBackEmployee() {
@@ -163,5 +163,5 @@ public class X5GroupTestStart {
         // switchTo().window(1).close();
 
     }
-
+*/
 }

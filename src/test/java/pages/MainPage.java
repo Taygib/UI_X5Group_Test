@@ -14,7 +14,6 @@ public class MainPage {
 
     public void openPage() {
         open("ru/");
-        sleep(500);
         $("div.cookie-consent__button-group").find(byText("Принять")).click();
         $("div.hero-main__logo").find(byText("Выбор в пользу будущего"));
     }
@@ -50,7 +49,6 @@ public class MainPage {
         corporateBlock.find(byText("Как получить доступ к миллионам клиентов по всей " +
                 "стране и другие возможности сотрудничества")).hover();
         corporateBlock.find(byText("Партнерам")).click();
-        sleep(1500);
         switchTo().window(0);
     }
 
@@ -59,6 +57,5 @@ public class MainPage {
                 "и другие данные для оценки эффективности компании")).hover();
         corporateBlock.find(byText("Инвесторам")).click();
         Selenide.back();
-        // switchTo().window(1).close();
     }
 }

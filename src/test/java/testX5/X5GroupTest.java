@@ -131,13 +131,9 @@ public class X5GroupTest extends TestBase {
             feedBackPage.whoIAm("Я сотрудник");
         });
 
-        sleep(500);
-
         step("Выбрать пункт Я бывший сотрудник", () -> {
             feedBackPage.whoIAm("Я бывший сотрудник");
         });
-
-        sleep(500);
 
         step("Выбрать пункт Я не сотрудник", () -> {
             feedBackPage.whoIAm("Я не сотрудник");

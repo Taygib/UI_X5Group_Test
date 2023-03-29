@@ -11,8 +11,8 @@ public class MenuContainPage {
     public void openOnlyPage() {
         open("ru/");
     }
-    public void parameterMenu(String value, List<String> expectedButtons) {
-        $(".header__content-menu").find(withText(value)).hover();
+    public void parameterMenu(String containMenu, List<String> expectedButtons) {
+        $(".header__content-menu").find(withText(containMenu)).hover();
         $$(".header__sub-menu-container > li").shouldHave(CollectionCondition.containExactTextsCaseSensitive(expectedButtons));
     }
 }

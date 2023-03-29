@@ -1,5 +1,7 @@
 package pages;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -7,7 +9,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class FeedBackPage {
     public void openPage() {
         open("ru/");
-        sleep(500);
+      //  sleep(500);
         $("div.cookie-consent__button-group").find(byText("Принять")).click();
         $("div.hero-main__logo").find(byText("Выбор в пользу будущего"));
     }
@@ -15,7 +17,8 @@ public class FeedBackPage {
         $(".feedback").$(".feedback__content").hover();
         $(".custom-select").shouldHave(text("Выберите роль"));
         $(".css-1n9v7xy").click();
-        sleep(500);
+       // sleep(500);
+        //, Duration.ofSeconds(1)
     }
 
     public void clickOnEmployee() {
@@ -27,8 +30,8 @@ public class FeedBackPage {
         $$(".button__inner").find(text("Далее")).click();
     }
 
-    public void whoIAm(String value) {
-        $("div.hlf-table").find(byText(value)).click();
+    public void whoIAm(String who) {
+        $("div.hlf-table").find(byText(who)).click();
     }
 }
 
