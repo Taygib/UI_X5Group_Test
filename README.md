@@ -61,7 +61,7 @@
 
 ### <img width="5%" title="Selenoid" src="materials/pictures/Selenoid.png"> Видео теста на Selenoid
 
-<video src="https://user-images.githubusercontent.com/105595414/225122657-60f841f9-0216-4920-83ca-64c76e8905ca.mp4"></video>
+<video src="materials/video/test-№4-FeedBackEmployee.gif"></video>
 
 <h2> №5 прогон всех тестов сразу </h2>
 
