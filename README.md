@@ -29,7 +29,7 @@
 ### <img width="5%" title="Selenoid" src="materials/pictures/Selenoid.png"> Видео теста на Selenoid
 
 
-<video src="https://user-images.githubusercontent.com/105595414/225107084-5e28cb85-46b2-4166-a95b-b73f16108ce7.mp4"></video>
+https://user-images.githubusercontent.com/105595414/225107084-5e28cb85-46b2-4166-a95b-b73f16108ce7.mp4
 
 
 <h2> №2 Тест поиска </h2>
@@ -40,7 +40,7 @@
 
 ### <img width="5%" title="Selenoid" src="materials/pictures/Selenoid.png"> Видео теста на Selenoid
 
-<video src="https://user-images.githubusercontent.com/105595414/225115497-60e318ce-768a-444b-826a-a6d5e9131ca1.mp4"></video>
+https://user-images.githubusercontent.com/105595414/225115497-60e318ce-768a-444b-826a-a6d5e9131ca1.mp4
 
 
 <h2> №3 Тест содержания меню </h2>
@@ -51,7 +51,7 @@
 
 ### <img width="5%" title="Selenoid" src="materials/pictures/Selenoid.png"> Видео теста на Selenoid
 
-<video src="https://user-images.githubusercontent.com/105595414/225117313-c7a4cd03-4778-4437-a4c0-3cb6495ffd8d.mp4"></video>
+https://user-images.githubusercontent.com/105595414/225117313-c7a4cd03-4778-4437-a4c0-3cb6495ffd8d.mp4
 
 <h2> №4 Тест обратной связи сотрудника </h2>
 
