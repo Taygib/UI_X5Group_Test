@@ -57,7 +57,7 @@ public class X5GroupTest extends TestBase {
         });
 
         step("Поиск из главной стр", () -> {
-            headerSearchPage.searchFromMainPage("география");
+            headerSearchPage.searchFromMainPage("поиск");
         });
 
         step("Поиск из раздела результаты", () -> {
