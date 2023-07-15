@@ -10,52 +10,47 @@ import static com.codeborne.selenide.Selenide.switchTo;
 public class MainPage {
     private SelenideElement
             buyerOuterContainer = $("div.buyer__outer-container"),
-            corporateBlock = $("div.corporate-block");
+            corporateBlock = $("div.corporate-block"),
+            cookieConsent = $("div.cookie-consent__button-group");
 
-    public void openPage() {
-        open("ru/");
-        $("div.cookie-consent__button-group").find(byText("Принять")).click();
-        $("div.hero-main__logo").find(byText("Выбор в пользу будущего"));
+    public void openPage(String language, String acceptcookie) {
+        open(language);
+        cookieConsent.find(byText(acceptcookie)).click();
     }
 
-    public void planMenu() {
-        buyerOuterContainer.find(byText("Найти рецепт и подобрать ингредиенты")).hover();
-        buyerOuterContainer.find(byText("Планирование")).click();
+    public void clickOnPlanMenu(String text, String clickContentName) {
+        buyerOuterContainer.find(byText(text)).hover();
+        buyerOuterContainer.find(byText(clickContentName)).click();
         Selenide.back();
     }
 
-    public void buyingMenu() {
-        buyerOuterContainer.find(byText("Купить продукты и товары для дома " +
-                "в магазине")).hover();
-        buyerOuterContainer.find(byText("Покупка")).click();
+    public void clickOnBuyingMenu(String text, String clickContentName) {
+        buyerOuterContainer.find(byText(text)).hover();
+        buyerOuterContainer.find(byText(clickContentName)).click();
         Selenide.back();
     }
 
-    public void deliveryMenu() {
-        buyerOuterContainer.find(byText("Заказать продукты и готовые блюда с доставкой" +
-                " на дом")).hover();
-        buyerOuterContainer.find(byText("Доставка")).click();
+    public void clickOnDeliveryMenu(String text, String clickContentName) {
+        buyerOuterContainer.find(byText(text)).hover();
+        buyerOuterContainer.find(byText(clickContentName)).click();
         Selenide.back();
     }
 
-    public void serviceMenu() {
-        buyerOuterContainer.find(byText("Дополнительные сервисы для комфортных " +
-                "и выгодных покупок")).hover();
-        buyerOuterContainer.find(byText("Сервисы")).click();
+    public void clickOnServiceMenu(String text, String clickContentName) {
+        buyerOuterContainer.find(byText(text)).hover();
+        buyerOuterContainer.find(byText(clickContentName)).click();
         Selenide.back();
     }
 
-    public void partnersMenu() {
-        corporateBlock.find(byText("Как получить доступ к миллионам клиентов по всей " +
-                "стране и другие возможности сотрудничества")).hover();
-        corporateBlock.find(byText("Партнерам")).click();
+    public void clickOnPartnersMenu(String text, String clickContentName) {
+        corporateBlock.find(byText(text)).hover();
+        corporateBlock.find(byText(clickContentName)).click();
         switchTo().window(0);
     }
 
-    public void investorsMenu() {
-        corporateBlock.find(byText("Темпы роста, развитие форматов и цифровых бизнесов " +
-                "и другие данные для оценки эффективности компании")).hover();
-        corporateBlock.find(byText("Инвесторам")).click();
+    public void clickOnInvestorsMenu(String text, String clickContentName) {
+        corporateBlock.find(byText(text)).hover();
+        corporateBlock.find(byText(clickContentName)).click();
         Selenide.back();
     }
 }

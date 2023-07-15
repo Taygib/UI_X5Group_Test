@@ -1,6 +1,9 @@
 package testX5;
 
 import data.ContentMenu;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -18,58 +21,83 @@ public class X5GroupTest extends TestBase {
     @Test
     @Tag("Group")
     @Tag("mainTest")
-    void mainPageTest() {
+    @Owner("Taygib")
+    @Severity(SeverityLevel.BLOCKER)
+    void mainPageTest() {                                   //  дополнить проверками
         step("Открыть страницу", () -> {
-            mainPage.openPage();
+            mainPage.openPage("ru/", "Принять");
         });
 
         step("Открыть раздел планирование", () -> {
-            mainPage.planMenu();
+            mainPage.clickOnPlanMenu("Найти рецепт и подобрать ингредиенты",
+                    "Планирование");
         });
 
         step("Открыть раздел покупка", () -> {
-            mainPage.buyingMenu();
+            mainPage.clickOnBuyingMenu("Купить продукты и товары для дома в магазине",
+                    "Покупка");
         });
 
         step("Открыть раздел доставка", () -> {
-            mainPage.deliveryMenu();
+            mainPage.clickOnDeliveryMenu("Заказать продукты и готовые блюда с доставкой на дом",
+                    "Доставка");
         });
 
         step("Открыть раздел сервисы", () -> {
-            mainPage.serviceMenu();
+            mainPage.clickOnServiceMenu("Дополнительные сервисы для комфортных и выгодных покупок",
+                    "Сервисы");
         });
 
         step("Открыть раздел партнерам", () -> {
-            mainPage.partnersMenu();
+            mainPage.clickOnPartnersMenu("Как получить доступ к миллионам клиентов по всей стране и" +
+                            " другие возможности сотрудничества",
+                    "Партнерам");
         });
 
         step("Открыть раздел инвесторам", () -> {
-            mainPage.investorsMenu();
+            mainPage.clickOnInvestorsMenu("Темпы роста, развитие форматов и цифровых бизнесов и" +
+                            " другие данные для оценки эффективности компании",
+                    "Инвесторам");
         });
     }
 
     @Test
     @Tag("Group")
     @Tag("Search")
+    @Owner("Taygib")
+    @Severity(SeverityLevel.BLOCKER)
     void headerSearchTest() {
+
+        String firstSearch = "география";
+        String secondSearch = "X5 Group";
+        String searchType = "по дате";
+
         step("Открыть страницу", () -> {
-            headerSearchPage.openPage();
+            headerSearchPage.openPage("ru/", "Принять");
         });
 
         step("Поиск из главной стр", () -> {
-            headerSearchPage.searchFromMainPage("поиск");
+            headerSearchPage.searchFromMainPage(firstSearch);
+
+            step("проверка поиска", () -> {
+                headerSearchPage.checkSearch(firstSearch);
+            });
         });
 
         step("Поиск из раздела результаты", () -> {
-            headerSearchPage.searchFromResultPage("X5 Group");
-        });
+            headerSearchPage.searchFromResultPage(secondSearch);
 
-        step("Тип поиска", () -> {
-            headerSearchPage.searchFromResultPageView("по дате");
-        });
+            step("Тип поиска", () -> {
+                headerSearchPage.searchFromResultPageView(searchType);
+            });
 
-        step("Поиск", () -> {
-            headerSearchPage.searchResult();
+            step("Поиск", () -> {
+                headerSearchPage.searchResult("Найти");
+            });
+
+            step("проверка поиска", () -> {
+                headerSearchPage.checkSearch(secondSearch);
+            });
         });
 
         step("Переход на главную страницу", () -> {
@@ -98,9 +126,11 @@ public class X5GroupTest extends TestBase {
     @ParameterizedTest
     @Tag("Group")
     @Tag("Menu")
+    @Owner("Taygib")
+    @Severity(SeverityLevel.BLOCKER)
     void menuContain(ContentMenu menuSection, List<String> expectedButtons) {
         step("Открыть страницу", () -> {
-            menuContainPage.openOnlyPage();
+            menuContainPage.openOnlyPage("ru/");
         });
 
         step("Проверка меню на содежания", () -> {
@@ -112,28 +142,56 @@ public class X5GroupTest extends TestBase {
     @Tag("Group")
     @Tag("Feedback")
     void feedBackEmployee() {
+
+        String role = "Я сотрудник";
+
         step("Открыть страницу", () -> {
-            feedBackPage.openPage();
+            feedBackPage.openPage("ru/", "Принять");
         });
 
         step("Выбрать роль", () -> {
-            feedBackPage.clickOnSelectRole();
-            feedBackPage.clickOnEmployee();
-            feedBackPage.clickOnEmployeeAndNext();
+
+            step("Проверка названия раздела =Обратная связь=", () -> {
+                feedBackPage.findFeedback("Обратная связь");
+            });
+
+            step("Найти и выбрать роль", () -> {
+                feedBackPage.findAndClickRole("Выберите роль", role);
+            });
+
+            step("Проверка выбора роли =" + role + "=", () -> {
+                feedBackPage.checkRole(role);
+            });
+
+            step("Нажать на кнопку =Далее=", () -> {
+                feedBackPage.clickOnButton("Далее");
+            });
         });
 
         switchTo().window(1);
 
-        step("Выбрать пункт Я сотрудник", () -> {
-            feedBackPage.whoIAm("Я сотрудник");
+        step("Выбрать пункт =Я сотрудник=", () -> {
+            feedBackPage.clickOnCheckboxWhoIAm("Я сотрудник");
+
+            step("Проверка выбранного пункта =Я сотрудник=", () -> {
+                feedBackPage.checkCheckbox("Я сотрудник");
+            });
         });
 
         step("Выбрать пункт Я бывший сотрудник", () -> {
-            feedBackPage.whoIAm("Я бывший сотрудник");
+            feedBackPage.clickOnCheckboxWhoIAm("Я бывший сотрудник");
+
+            step("Проверка выбранного пункта =Я бывший сотрудник=", () -> {
+                feedBackPage.checkCheckbox("Я бывший сотрудник");
+            });
         });
 
         step("Выбрать пункт Я не сотрудник", () -> {
-            feedBackPage.whoIAm("Я не сотрудник");
+            feedBackPage.clickOnCheckboxWhoIAm("Я не сотрудник");
+
+            step("Проверка выбранного пункта =Я не сотрудник=", () -> {
+                feedBackPage.checkCheckbox("Я не сотрудник");
+            });
         });
     }
 }

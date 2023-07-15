@@ -34,7 +34,8 @@ repositories {
 
 dependencies {
     testImplementation(
-            'com.codeborne:selenide:6.15.0',
+            //'com.codeborne:selenide:6.3.5',
+            'com.codeborne:selenide:6.16.0',
             "org.junit.jupiter:junit-jupiter:5.9.3",
             "org.slf4j:slf4j-simple:2.0.6",
             'io.qameta.allure:allure-selenide:2.22.2',
