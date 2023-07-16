@@ -23,7 +23,7 @@ public class X5GroupTest extends TestBase {
     @Tag("mainTest")
     @Owner("Taygib")
     @Severity(SeverityLevel.BLOCKER)
-    void mainPageTest() {                                   //  дополнить проверками
+    void mainPageTest() {
         step("Открыть страницу", () -> {
             mainPage.openPage("ru/", "Принять");
         });
@@ -31,22 +31,41 @@ public class X5GroupTest extends TestBase {
         step("Открыть раздел планирование", () -> {
             mainPage.clickOnPlanMenu("Найти рецепт и подобрать ингредиенты",
                     "Планирование");
+
+            step("Проверить название торговых сетей", () -> {
+                mainPage.checkClickOnPlan("Food.ru");
+            });
         });
 
         step("Открыть раздел покупка", () -> {
             mainPage.clickOnBuyingMenu("Купить продукты и товары для дома в магазине",
                     "Покупка");
+
+            step("Проверить название торговых сетей", () -> {
+                mainPage.checkClickOnBuying("Перекрёсток", "Пятёрочка", "Чижик",
+                        "Красный Яр", "Слата");
+            });
         });
 
         step("Открыть раздел доставка", () -> {
             mainPage.clickOnDeliveryMenu("Заказать продукты и готовые блюда с доставкой на дом",
                     "Доставка");
+            step("Проверить название торговых сетей", () -> {
+                mainPage.checkClickOnDelivery("Впрок", "Перекрёсток",
+                        "Пятёрочка", "Много лосося");
+            });
         });
 
         step("Открыть раздел сервисы", () -> {
             mainPage.clickOnServiceMenu("Дополнительные сервисы для комфортных и выгодных покупок",
                     "Сервисы");
+            step("Проверить название торговых сетей", () -> {
+                mainPage.checkClickOnService("X5 ID", "X5 Банк",
+                        "Х5 Клуб", "X5 Пакет", "5Post");
+            });
         });
+
+        //  дополнить проверками
 
         step("Открыть раздел партнерам", () -> {
             mainPage.clickOnPartnersMenu("Как получить доступ к миллионам клиентов по всей стране и" +
@@ -141,6 +160,8 @@ public class X5GroupTest extends TestBase {
     @Test
     @Tag("Group")
     @Tag("Feedback")
+    @Owner("Taygib")
+    @Severity(SeverityLevel.BLOCKER)
     void feedBackEmployee() {
 
         String role = "Я сотрудник";
@@ -174,7 +195,7 @@ public class X5GroupTest extends TestBase {
             feedBackPage.clickOnCheckboxWhoIAm("Я сотрудник");
 
             step("Проверка выбранного пункта =Я сотрудник=", () -> {
-                feedBackPage.checkCheckbox("Я сотрудник");
+                feedBackPage.checkClickOnCheckbox("Я сотрудник");
             });
         });
 
@@ -182,7 +203,7 @@ public class X5GroupTest extends TestBase {
             feedBackPage.clickOnCheckboxWhoIAm("Я бывший сотрудник");
 
             step("Проверка выбранного пункта =Я бывший сотрудник=", () -> {
-                feedBackPage.checkCheckbox("Я бывший сотрудник");
+                feedBackPage.checkClickOnCheckbox("Я бывший сотрудник");
             });
         });
 
@@ -190,7 +211,7 @@ public class X5GroupTest extends TestBase {
             feedBackPage.clickOnCheckboxWhoIAm("Я не сотрудник");
 
             step("Проверка выбранного пункта =Я не сотрудник=", () -> {
-                feedBackPage.checkCheckbox("Я не сотрудник");
+                feedBackPage.checkClickOnCheckbox("Я не сотрудник");
             });
         });
     }

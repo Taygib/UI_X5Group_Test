@@ -47,7 +47,7 @@ public class FeedBackPage {
         hlfTable.find(byText(who)).click();
     }
 
-    public void checkCheckbox(String WhoIAm) {
+    public void checkClickOnCheckbox(String WhoIAm) {
         hlfTable.find(byText(WhoIAm)).parent().$("[type=radio]").shouldBe(checked);
     }
 }
