@@ -3,7 +3,6 @@ package pages;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -17,8 +16,9 @@ public class MainPage {
             slidePlanning = $("[data-slide=planning]"),
             slideShopping = $("[data-slide=shopping]").$(".buyer-slider-content-item__icon-items"),
             slideDelivery = $("[data-slide=delivery]").$(".buyer-slider-content-item__icon-items"),
-            slideServices = $("[data-slide=services]").$(".buyer-slider-content-item__icon-items");
-
+            slideServices = $("[data-slide=services]").$(".buyer-slider-content-item__icon-items"),
+            blockHeader = $(".block-header__heading"),
+            calendarHeader = $(".calendar__header");
 
 
     public void openPage(String language, String acceptcookie) {
@@ -69,12 +69,23 @@ public class MainPage {
     public void clickOnPartnersMenu(String text, String clickContentName) {
         corporateBlock.find(byText(text)).hover();
         corporateBlock.find(byText(clickContentName)).click();
+
+    }
+
+    public void checkClickOnPartners(String Suppliers) {
+        blockHeader.find(byText(Suppliers));
         switchTo().window(0);
     }
 
     public void clickOnInvestorsMenu(String text, String clickContentName) {
         corporateBlock.find(byText(text)).hover();
         corporateBlock.find(byText(clickContentName)).click();
+
+    }
+
+    public void checkClickOnInvestors(String investors) {
+        calendarHeader.hover();
+        calendarHeader.shouldHave(text(investors));
         Selenide.back();
     }
 }
