@@ -1,166 +1,222 @@
 package testX5;
 
-import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.conditions.Text;
 import data.ContentMenu;
-import org.junit.jupiter.api.DisplayName;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static com.codeborne.selenide.CollectionCondition.*;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
+import static io.qameta.allure.Allure.step;
 
-public class X5GroupTest {
+public class X5GroupTest extends TestBase {
 
     @Test
+    @Tag("Group")
     @Tag("mainTest")
+    @Owner("Taygib")
+    @Severity(SeverityLevel.BLOCKER)
     void mainPageTest() {
+        step("Открыть страницу", () -> {
+            mainPage.openPage("ru/", "Принять");
+        });
 
-        Configuration.holdBrowserOpen = true;
+        step("Открыть раздел =планирование=", () -> {
+            mainPage.clickOnPlanMenu("Найти рецепт и подобрать ингредиенты",
+                    "Планирование");
 
-        open("https://www.x5.ru/ru/");
-        $("div.cookie-consent__button-group").find(byText("Принять")).click();
+            step("Проверить название торговых сетей", () -> {
+                mainPage.checkClickOnPlan("Food.ru");
+            });
+        });
 
-        $("div.hero-main__logo").find(byText("Выбор в пользу будущего"));
+        step("Открыть раздел =покупка=", () -> {
+            mainPage.clickOnBuyingMenu("Купить продукты и товары для дома в магазине",
+                    "Покупка");
 
-        //Планирование
-        $("div.buyer__outer-container").find(byText("Найти рецепт и подобрать ингредиенты")).hover();
-        $("div.buyer__outer-container").find(byText("Планирование")).click();
-        Selenide.back();
+            step("Проверить название торговых сетей", () -> {
+                mainPage.checkClickOnBuying("Перекрёсток", "Пятёрочка", "Чижик",
+                        "Красный Яр", "Слата");
+            });
+        });
 
-        //Покупка
-        $("div.buyer__outer-container").find(byText("Купить продукты и товары для дома " +
-                "в магазине")).hover();
-        $("div.buyer__outer-container").find(byText("Покупка")).click();
-        Selenide.back();
+        step("Открыть раздел =доставка=", () -> {
+            mainPage.clickOnDeliveryMenu("Заказать продукты и готовые блюда с доставкой на дом",
+                    "Доставка");
+            step("Проверить название торговых сетей", () -> {
+                mainPage.checkClickOnDelivery("Впрок", "Перекрёсток",
+                        "Пятёрочка", "Много лосося");
+            });
+        });
 
-        //Доставка
-        $("div.buyer__outer-container").find(byText("Заказать продукты и готовые блюда с доставкой" +
-                " на дом")).hover();
-        $("div.buyer__outer-container").find(byText("Доставка")).click();
-        Selenide.back();
+        step("Открыть раздел =сервисы=", () -> {
+            mainPage.clickOnServiceMenu("Дополнительные сервисы для комфортных и выгодных покупок",
+                    "Сервисы");
+            step("Проверить название торговых сетей", () -> {
+                mainPage.checkClickOnService("X5 ID", "X5 Банк",
+                        "Х5 Клуб", "X5 Пакет", "5Post");
+            });
+        });
 
-        //Сервисы
-        $("div.buyer__outer-container").find(byText("Дополнительные сервисы для комфортных " +
-                "и выгодных покупок")).hover();
-        $("div.buyer__outer-container").find(byText("Сервисы")).click();
-        Selenide.back();
+        step("Открыть раздел партнерам", () -> {
+            mainPage.clickOnPartnersMenu("Как получить доступ к миллионам клиентов по всей стране и" +
+                            " другие возможности сотрудничества",
+                    "Партнерам");
+            step("Проверить наличие раздела =партнерам=", () -> {
+                mainPage.checkClickOnPartners("Поставщикам");
+            });
+        });
 
-
-        //Партнерам
-        $("div.corporate-block").find(byText("Как получить доступ к миллионам клиентов по всей " +
-                "стране и другие возможности сотрудничества")).hover();
-        $("div.corporate-block").find(byText("Партнерам")).click();
-
-        switchTo().window(0);
-
-
-        //Инвесторам
-        $("div.corporate-block").find(byText("Темпы роста, развитие форматов и цифровых бизнесов " +
-                "и другие данные для оценки эффективности компании")).hover();
-        $("div.corporate-block").find(byText("Инвесторам")).click();
-        Selenide.back();
-        switchTo().window(1).close();
-
+        step("Открыть раздел инвесторам", () -> {
+            mainPage.clickOnInvestorsMenu("Темпы роста, развитие форматов и цифровых бизнесов и" +
+                            " другие данные для оценки эффективности компании",
+                    "Инвесторам");
+            step("Проверить наличие раздела =инвесторам=", () -> {
+                mainPage.checkClickOnInvestors("Календарь инвестора");
+            });
+        });
     }
 
     @Test
+    @Tag("Group")
     @Tag("Search")
+    @Owner("Taygib")
+    @Severity(SeverityLevel.BLOCKER)
     void headerSearchTest() {
 
-      //  Configuration.holdBrowserOpen = true;
+        String firstSearch = "география";
+        String secondSearch = "X5 Group";
+        String searchType = "по дате";
 
-        open("https://www.x5.ru/ru/");
-        $("div.cookie-consent__button-group").find(byText("Принять")).click();
+        step("Открыть страницу", () -> {
+            headerSearchPage.openPage("ru/", "Принять");
+        });
 
-        $("div.hero-main__logo").find(byText("Выбор в пользу будущего"));
+        step("Поиск из главной стр", () -> {
+            headerSearchPage.searchFromMainPage(firstSearch);
 
-        //Поиск
-        //Поиск из главной стр
-        $("div.header-search").click();
-        $(".header-search__term").click();
-        $(".header-search__term").setValue("география").pressEnter();
-        $(".search-form__clear-btn").click();
-        //поиск из раздела Результаты
-        $(".search-form__term").setValue("X5 Group");
-        $(".search-form__type-cnt").find(byText("по дате")).click();
-        $("div.search-form__buttons").find(byText("Найти")).click();
-        $(".header__logo").click();
+            step("проверка поиска", () -> {
+                headerSearchPage.checkSearch(firstSearch);
+            });
+        });
 
+        step("Поиск из раздела результаты", () -> {
+            headerSearchPage.searchFromResultPage(secondSearch);
+
+            step("Тип поиска", () -> {
+                headerSearchPage.searchFromResultPageView(searchType);
+            });
+
+            step("Поиск", () -> {
+                headerSearchPage.searchResult("Найти");
+            });
+
+            step("проверка поиска", () -> {
+                headerSearchPage.checkSearch(secondSearch);
+            });
+        });
+
+        step("Переход на главную страницу", () -> {
+            headerSearchPage.goToMainPage();
+        });
     }
 
     static Stream<Arguments> menuContain() {
         return Stream.of(
-                Arguments.of(ContentMenu.Компания, List.of("История компании" + "\n" + "География" +
-                        "\n" + "Деловая этика" + "\n" + "Стратегия устойчивого развития", "", "", "")),
-                Arguments.of(ContentMenu.Партнерам, List.of("", "Добросовестное партнёрство" + "\n" + "Поставщикам"
-                        + "\n" + "Сервисы для поставщиков" + "\n" + "Маркетинговые возможности" + "\n" + "Стать франчайзи"
-                        + "\n" + "X5 Transport" + "\n" + "Операции с недвижимостью" + "\n" + "X5 Import" +
-                        "\n" + "X5 Ready Food" + "\n" + "Закупки для собственных нужд X5 Group", "", "")),
-                Arguments.of(ContentMenu.Инвесторам, List.of("", "", "Отчёты и результаты" + "\n"
-                        + "Акции" + "\n" + "Долговые инструменты" + "\n" + "Корпоративное управление" +
-                        "\n" + "Кредитные рейтинги" + "\n" + "Частным инвесторам" +
-                        "\n" + "Календарь инвестора" + "\n" + "ESG", "")),
-                Arguments.of(ContentMenu.Пресс, List.of("", "", "", "Пресс-релизы" + "\n" + "Интервью" +
-                        "\n" + "Индекс «Пятёрочки»" + "\n" + "Фотобанк" + "\n" + "Фирменный стиль X5 Group" +
-                        "\n" + "Контакты для прессы"))
+                Arguments.of(ContentMenu.COMPANY, List.of(
+                        "История компании", "География", "Деловая этика", "Стратегия устойчивого развития")),
+                Arguments.of(ContentMenu.PARTNERS, List.of(
+                        "Добросовестное партнёрство", "Поставщикам", "Сервисы для поставщиков",
+                        "Маркетинговые возможности", "Стать франчайзи", "X5 Transport",
+                        "Операции с недвижимостью", "X5 Import", "X5 Ready Food",
+                        "Закупки для собственных нужд X5 Group")),
+                Arguments.of(ContentMenu.INVESTORS, List.of("Отчёты и результаты", "Акции", "Долговые инструменты",
+                        "Корпоративное управление", "Кредитные рейтинги", "Частным инвесторам",
+                        "Календарь инвестора", "ESG")),
+                Arguments.of(ContentMenu.PRESS, List.of("Пресс-релизы", "Интервью", "Индекс «Пятёрочки»",
+                        "Фотобанк", "Фирменный стиль X5 Group", "Контакты для прессы"))
         );
     }
 
     @MethodSource
     @ParameterizedTest
+    @Tag("Group")
     @Tag("Menu")
-    void menuContain(
+    @Owner("Taygib")
+    @Severity(SeverityLevel.BLOCKER)
+    void menuContain(ContentMenu menuSection, List<String> expectedButtons) {
+        step("Открыть страницу", () -> {
+            menuContainPage.openOnlyPage("ru/");
+        });
 
-            ContentMenu contain,
-            List<String> buttons
-    ) {
-
-       // Configuration.holdBrowserOpen = true;
-
-        open("https://www.x5.ru/ru/");
-
-        $(".header__content-menu").find(withText(contain.name())).hover();
-        $$("ul.header__sub-menu-container").shouldHave(texts(buttons));
-
+        step("Проверка меню на содежания", () -> {
+            menuContainPage.parameterMenu(menuSection.toString(), expectedButtons);
+        });
     }
 
     @Test
+    @Tag("Group")
     @Tag("Feedback")
-    void FeedBackEmployee() {
+    @Owner("Taygib")
+    @Severity(SeverityLevel.BLOCKER)
+    void feedBackEmployee() {
 
-       // Configuration.holdBrowserOpen = true;
+        String role = "Я сотрудник";
 
-        open("https://www.x5.ru/ru/");
+        step("Открыть страницу", () -> {
+            feedBackPage.openPage("ru/", "Принять");
+        });
 
-        $("div.cookie-consent__button-group").find(byText("Принять")).click();
+        step("Выбрать роль", () -> {
 
-        $(".feedback").$(".feedback__content").hover();
-        $(".custom-select").shouldHave(text("Выберите роль"));
-        $(".css-1n9v7xy").click();
-        $("#react-select-2-listbox").find(byText("Я сотрудник")).click();
-        $$(".feedback__content").find(text("Далее")).hover();
-        $$(".button__inner").find(text("Далее")).click();
+            step("Проверка названия раздела =Обратная связь=", () -> {
+                feedBackPage.findFeedback("Обратная связь");
+            });
+
+            step("Найти и выбрать роль", () -> {
+                feedBackPage.findAndClickRole("Выберите роль", role);
+            });
+
+            step("Проверка выбора роли =" + role + "=", () -> {
+                feedBackPage.checkRole(role);
+            });
+
+            step("Нажать на кнопку =Далее=", () -> {
+                feedBackPage.clickOnButton("Далее");
+            });
+        });
+
         switchTo().window(1);
-        $("div.hlf-table").find(byText("Я сотрудник")).click();
-        sleep(500);
-        $("div.hlf-table").find(byText("Я бывший сотрудник")).click();
-        sleep(500);
-        $("div.hlf-table").find(byText("Я не сотрудник")).click();
 
+        step("Выбрать пункт =Я сотрудник=", () -> {
+            feedBackPage.clickOnCheckboxWhoIAm("Я сотрудник");
 
+            step("Проверка выбранного пункта =Я сотрудник=", () -> {
+                feedBackPage.checkClickOnCheckbox("Я сотрудник");
+            });
+        });
+
+        step("Выбрать пункт Я бывший сотрудник", () -> {
+            feedBackPage.clickOnCheckboxWhoIAm("Я бывший сотрудник");
+
+            step("Проверка выбранного пункта =Я бывший сотрудник=", () -> {
+                feedBackPage.checkClickOnCheckbox("Я бывший сотрудник");
+            });
+        });
+
+        step("Выбрать пункт Я не сотрудник", () -> {
+            feedBackPage.clickOnCheckboxWhoIAm("Я не сотрудник");
+
+            step("Проверка выбранного пункта =Я не сотрудник=", () -> {
+                feedBackPage.checkClickOnCheckbox("Я не сотрудник");
+            });
+        });
     }
-
 }

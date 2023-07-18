@@ -17,6 +17,13 @@ allure {
         }
     }
 }
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+compileJava.options.encoding = 'UTF-8'
 
 group 'org.example'
 version '1.0-SNAPSHOT'
@@ -27,12 +34,50 @@ repositories {
 
 dependencies {
     testImplementation(
-            "com.codeborne:selenide:6.3.5",
-            "org.junit.jupiter:junit-jupiter:5.9.1",
-            "org.slf4j:slf4j-simple:2.0.6"
+            //'com.codeborne:selenide:6.3.5',
+            'com.codeborne:selenide:6.16.0',
+            "org.junit.jupiter:junit-jupiter:5.9.3",
+            "org.slf4j:slf4j-simple:2.0.6",
+            'io.qameta.allure:allure-selenide:2.22.2',
+            "io.rest-assured:rest-assured:5.3.0",
+            "io.qameta.allure:allure-rest-assured:2.21.0",
+            "com.fasterxml.jackson.core:jackson-databind:2.14.2",
     )
 }
 
 test {
     useJUnitPlatform()
+}
+task testMainPage(type: Test) {
+    useJUnitPlatform() {
+        includeTags("mainTest")
+    }
+}
+
+task searchTest(type: Test) {
+    useJUnitPlatform() {
+        includeTags("Search")
+    }
+}
+
+task menuContainTest(type: Test) {
+    useJUnitPlatform() {
+        includeTags("Menu")
+    }
+}
+
+task feedbackTest(type: Test) {
+    useJUnitPlatform() {
+        includeTags("Feedback")
+    }
+}
+task Alltests(type: Test) {
+    useJUnitPlatform() {
+        includeTags("Group")
+    }
+}
+task Apitests(type: Test) {
+    useJUnitPlatform() {
+        includeTags("Api")
+    }
 }
