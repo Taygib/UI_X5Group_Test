@@ -15,7 +15,7 @@
   <a href="https://www.java.com/"><img width="6%" title="Java" src="materials/pictures/Java.png"></a>
   <a href="https://junit.org/junit5/"><img width="6%" title="junit5" src="materials/pictures/junit5.png"> </a>
 </p>
-
+ 
 <h2> <img width="5%" title="Jenkins" src="materials/pictures/Jenkins.png"> Старт запуска в Jenkins  </h2>  
 <p align="center">
 <img width="70%" title="Jenkins Build" src="https://github.com/Taygib/X5Group_Test/blob/FiveTests/materials/screens/Jenkins%20Start.png?raw=true">
@@ -71,84 +71,4 @@ https://user-images.githubusercontent.com/105595414/225122657-60f841f9-0216-4920
 |   <img width="5%" title="Telegram" src="materials/pictures/Telegram.png"> Telegram![test №5 AllTests2 Telegram.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests2%20Telegram.png) | |
 
 
-### <img width="6%" title="Gradle" src="materials/pictures/Gradle.png"> Gradle
-```
-plugins {
-    id 'java'
-    id 'java-library'
-    id 'io.qameta.allure' version '2.11.2'
-}
-
-allure {
-    report {
-        version.set("2.21.0")
-    }
-    adapter { // отвечает за появление папки build/allure-results
-        aspectjWeaver.set(true) //обработка аннотации @Step
-        frameworks {
-            junit5 { //название фреймворка
-                adapterVersion.set("2.21.0") //версия интеграции фреймворка и Allure
-            }
-        }
-    }
-}
-compileTestJava {
-    options.encoding = 'UTF-8'
-}
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-}
-compileJava.options.encoding = 'UTF-8'
-
-group 'org.example'
-version '1.0-SNAPSHOT'
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    testImplementation(
-            'com.codeborne:selenide:6.15.0',
-            "org.junit.jupiter:junit-jupiter:5.9.3",
-            "org.slf4j:slf4j-simple:2.0.6",
-            'io.qameta.allure:allure-selenide:2.22.2',
-            "io.rest-assured:rest-assured:5.3.0",
-            "io.qameta.allure:allure-rest-assured:2.21.0",
-            "com.fasterxml.jackson.core:jackson-databind:2.14.2",
-    )
-}
-
-test {
-    useJUnitPlatform()
-}
-task testMainPage(type: Test) {
-    useJUnitPlatform() {
-        includeTags("mainTest")
-    }
-}
-
-task searchTest(type: Test) {
-    useJUnitPlatform() {
-        includeTags("Search")
-    }
-}
-
-task menuContainTest(type: Test) {
-    useJUnitPlatform() {
-        includeTags("Menu")
-    }
-}
-
-task feedbackTest(type: Test) {
-    useJUnitPlatform() {
-        includeTags("Feedback")
-    }
-}
-task Alltests(type: Test) {
-    useJUnitPlatform() {
-        includeTags("Group")
-    }
-}
-```
 
