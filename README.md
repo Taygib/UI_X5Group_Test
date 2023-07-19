@@ -18,7 +18,7 @@
  
 <h2> <img width="5%" title="Jenkins" src="materials/pictures/Jenkins.png"> Старт запуска в Jenkins  </h2>  
 <p align="center">
-<img width="70%" title="Jenkins Build" src="https://github.com/Taygib/X5Group_Test/blob/FiveTests/materials/screens/Jenkins%20Start.png?raw=true">
+<img width="70%" title="Jenkins Build" src="https://github.com/Taygib/X5Group_Test/blob/FiveTests/materials/screens/Jenkins Start.png?raw=true">
  </p>
 
 <h2> №1 Тест главной страницы </h2>
