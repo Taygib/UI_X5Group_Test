@@ -25,7 +25,7 @@
 - - *Партнерам*
 - - *Инвесторам*
 - *Проверка поиска*
-- *Проверка наличие подменю в меню:*
+- *Проверка наличие подменю в меню главной страницы:*
 - - *Компания*
 - - *Партнерам*
 - - *Инвесторам*
@@ -38,7 +38,7 @@
  
 ## <img width="5%" title="Jenkins" src="materials/pictures/Jenkins.png"> Сборка в Jenkins    
 <p align="center">
-<img width="60%" title="Jenkins Build" src="https://github.com/Taygib/X5Group_Test/blob/FiveTests/materials/screens/Jenkins Start.png?raw=true">
+<img width="70%" title="Jenkins Build" src="https://github.com/Taygib/X5Group_Test/blob/FiveTests/materials/screens/Jenkins Start.png?raw=true">
  </p>
 
 ## Запуск тестов
@@ -82,14 +82,21 @@ https://user-images.githubusercontent.com/105595414/225107084-5e28cb85-46b2-4166
 
 |<img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" > Allure![test №2 HeaderSearch.png](materials%2Fscreens%2Ftest%20%E2%84%962%20HeaderSearch.png)| <img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" > Allure![test №2 HeaderSearch1.png](materials%2Fscreens%2Ftest%20%E2%84%962%20HeaderSearch1.png)|
 |:---:|:---:|
-|<img width="5%" title="Telegram" src="materials/pictures/Telegram.png"> Telegram![test №2 HeaderSearch2 Telegram.png](materials%2Fscreens%2Ftest%20%E2%84%962%20HeaderSearch2%20Telegram.png)||
+
+<p align="center">
+<img width="3%" title="Telegram" src="materials/pictures/Telegram.png"> Telegram
+</p>
+
+<p align="center">
+<img width="40%" src = "materials/screens/test №2 HeaderSearch2 Telegram.png">
+</p>
 
 ### <img width="5%" title="Selenoid" src="materials/pictures/Selenoid.png"> Видео теста на Selenoid
 
 https://user-images.githubusercontent.com/105595414/225115497-60e318ce-768a-444b-826a-a6d5e9131ca1.mp4
 
 
-<h2> №3 Тест содержания меню </h2>
+<h2> №3 Тест содержания в меню </h2>
 
 | <img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" > Allure![test №3 menuContain.png](materials%2Fscreens%2Ftest%20%E2%84%963%20menuContain.png)  | <img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" > Allure![test №3 menuContain1.png](materials%2Fscreens%2Ftest%20%E2%84%963%20menuContain1.png) |
 |:-----------------------------------------------------------------------------------------------------------:|:--------:|
