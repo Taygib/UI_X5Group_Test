@@ -3,8 +3,10 @@ package testX5;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import config.DriverConfig;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,6 +16,12 @@ import pages.*;
 import java.util.Map;
 
 public class TestBase {
+    private final DriverConfig config;
+
+    public TestBase() {
+        this.config = ConfigFactory.create(DriverConfig.class, System.getProperties());
+    }
+
     MainPage mainPage = new MainPage();
     HeaderSearchPage headerSearchPage = new HeaderSearchPage();
     MenuContainPage menuContainPage = new MenuContainPage();

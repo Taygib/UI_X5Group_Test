@@ -15,8 +15,17 @@
   <a href="https://www.java.com/"><img width="6%" title="Java" src="materials/pictures/Java.png"></a>
   <a href="https://junit.org/junit5/"><img width="6%" title="junit5" src="materials/pictures/junit5.png"> </a>
 </p>
+
+## Проверки
+- *Проверка раздела:*
+- - - *Планирование*
+- - - *Покупки*
+- - - *Доставка*
+- - - *Сервисы*
+- - - *Партнерам*
+- - - *Инвесторам*
  
-<h2> <img width="5%" title="Jenkins" src="materials/pictures/Jenkins.png"> Старт запуска в Jenkins  </h2>  
+<h2> <img width="5%" title="Jenkins" src="materials/pictures/Jenkins.png"> Запуск тестов в Jenkins  </h2>  
 <p align="center">
 <img width="70%" title="Jenkins Build" src="https://github.com/Taygib/X5Group_Test/blob/FiveTests/materials/screens/Jenkins Start.png?raw=true">
  </p>

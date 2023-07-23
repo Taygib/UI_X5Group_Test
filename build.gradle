@@ -42,6 +42,7 @@ dependencies {
             "io.rest-assured:rest-assured:5.3.0",
             "io.qameta.allure:allure-rest-assured:2.21.0",
             "com.fasterxml.jackson.core:jackson-databind:2.14.2",
+            "org.aeonbits.owner:owner:1.0.12",
     )
 }
 
@@ -71,13 +72,8 @@ task feedbackTest(type: Test) {
         includeTags("Feedback")
     }
 }
-task Alltests(type: Test) {
+task x5GroupTests(type: Test) {
     useJUnitPlatform() {
         includeTags("Group")
-    }
-}
-task Apitests(type: Test) {
-    useJUnitPlatform() {
-        includeTags("Api")
     }
 }
