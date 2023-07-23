@@ -2,7 +2,7 @@
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Автотест+страницы+X5Group)](https://www.x5.ru/ru/)
 
-<h2>  :hammer_and_wrench: :gear: Cтек </h2>
+<h2>  :hammer_and_wrench: Cтек </h2>
 <p align="center">
   <a href="https://www.jetbrains.com/idea/"><img width="6%" title="IDEA" src="materials/pictures/IDEA.png"> </a>
   <a href="https://selenide.org/"><img width="6%" title="Selenide" src="materials/pictures/Selenide.png"> </a>
@@ -36,7 +36,7 @@
 - - *Я не сотрудник*
 
  
-## <img width="5%" title="Jenkins" src="materials/pictures/Jenkins.png"> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Students/job/testX5Group/)    
+## :gear: <img width="5%" title="Jenkins" src="materials/pictures/Jenkins.png"> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Students/job/testX5Group/)    
 <p align="center">
 <img width="70%" title="Jenkins Build" src="https://github.com/Taygib/X5Group_Test/blob/FiveTests/materials/screens/Jenkins Start.png?raw=true">
  </p>
