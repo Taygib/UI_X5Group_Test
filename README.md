@@ -100,7 +100,14 @@ https://user-images.githubusercontent.com/105595414/225115497-60e318ce-768a-444b
 
 | <img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" > Allure![test №3 menuContain.png](materials%2Fscreens%2Ftest%20%E2%84%963%20menuContain.png)  | <img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" > Allure![test №3 menuContain1.png](materials%2Fscreens%2Ftest%20%E2%84%963%20menuContain1.png) |
 |:-----------------------------------------------------------------------------------------------------------:|:--------:|
-| <img width="5%" title="Telegram" src="materials/pictures/Telegram.png"> Telegram![test №3 menuContain2 Telegram.png](materials%2Fscreens%2Ftest%20%E2%84%963%20menuContain2%20Telegram.png) |    |
+
+<p align="center">
+<img width="3%" title="Telegram" src="materials/pictures/Telegram.png"> Telegram
+</p>
+
+<p align="center">
+img width="40%" src = "materials/screens/test №3 menuContain2 Telegram.png") 
+</p>
 
 ### <img width="5%" title="Selenoid" src="materials/pictures/Selenoid.png"> Видео теста на Selenoid
 
