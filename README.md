@@ -130,7 +130,7 @@ https://user-images.githubusercontent.com/105595414/225117313-c7a4cd03-4778-4437
 
 https://user-images.githubusercontent.com/105595414/225122657-60f841f9-0216-4920-83ca-64c76e8905ca.mp4
 
-<h3> №5 прогон всех тестов </h3>
+<h3> №5 Прогон всех тестов </h3>
 
 |      <img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" > Allure![test №5 AllTests.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests.png)      |      <img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" >    Allure![test №5 AllTests1-1.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests1-1.png)          |
 |:-----------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------:|
