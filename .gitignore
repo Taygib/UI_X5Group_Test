@@ -1,9 +1,9 @@
 /.gradle
-/gradle/
+.gradle
 /.idea
 !**/src/main/**
 !**/src/test/**
 *.log
 .allure
-/gradlew
-/gradlew.bat
+.gradlew
+.gradlew.bat
