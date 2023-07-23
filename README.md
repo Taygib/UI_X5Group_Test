@@ -41,7 +41,7 @@
 <img width="70%" title="Jenkins Build" src="https://github.com/Taygib/X5Group_Test/blob/FiveTests/materials/screens/Jenkins Start.png?raw=true">
  </p>
 
-## Запуск тестов
+## :rocket: Запуск тестов
 
 __*Локально, из терминала:*__
 ```
