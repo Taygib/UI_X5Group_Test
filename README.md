@@ -69,7 +69,7 @@ ${TASK}
 <img width="3%" title="Telegram" src="materials/pictures/Telegram.png">Telegram
 </p>
 <p align="center">
-<img width="40%"  src="materials/screens/test%20%E2%84%961%20MainPage2%20Telegram.png?raw=true">                                                                            
+<img width="45%"  src="materials/screens/test%20%E2%84%961%20MainPage2%20Telegram.png?raw=true">                                                                            
  </p>
 
 ### <img width="5%" title="Selenoid" src="materials/pictures/Selenoid.png"> Видео теста на Selenoid
@@ -88,7 +88,7 @@ https://user-images.githubusercontent.com/105595414/225107084-5e28cb85-46b2-4166
 </p>
 
 <p align="center">
-<img width="40%" src = "materials/screens/test №2 HeaderSearch2 Telegram.png">
+<img width="45%" src = "materials/screens/test №2 HeaderSearch2 Telegram.png">
 </p>
 
 ### <img width="5%" title="Selenoid" src="materials/pictures/Selenoid.png"> Видео теста на Selenoid
@@ -106,7 +106,7 @@ https://user-images.githubusercontent.com/105595414/225115497-60e318ce-768a-444b
 </p>
 
 <p align="center">
-<img width="40%" src = "materials/screens/test №3 menuContain2 Telegram.png"> 
+<img width="45%" src = "materials/screens/test №3 menuContain2 Telegram.png"> 
 </p>
 
 ### <img width="5%" title="Selenoid" src="materials/pictures/Selenoid.png"> Видео теста на Selenoid
@@ -123,7 +123,7 @@ https://user-images.githubusercontent.com/105595414/225117313-c7a4cd03-4778-4437
 </p>
 
 <p align="center">
-<img width="40%" src = "materials/screens/test №4 FeedBackEmployee2 Telegram.png">
+<img width="45%" src = "materials/screens/test №4 FeedBackEmployee2 Telegram.png">
 </p>
 
 ### <img width="5%" title="Selenoid" src="materials/pictures/Selenoid.png"> Видео теста на Selenoid
@@ -140,7 +140,7 @@ https://user-images.githubusercontent.com/105595414/225122657-60f841f9-0216-4920
 </p>
 
 <p align="center">
-<img width="40%" src = "materials/screens/test №5 AllTests2 Telegram.png">
+<img width="45%" src = "materials/screens/test №5 AllTests2 Telegram.png">
 </p>
 
 
