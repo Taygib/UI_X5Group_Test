@@ -1,5 +1,5 @@
 /.gradle
-/.gradle/
+/.gradle/wrapper
 /.idea
 !**/src/main/**
 !**/src/test/**
