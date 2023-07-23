@@ -36,10 +36,29 @@
 - - *Я не сотрудник*
 
  
-<h2> <img width="5%" title="Jenkins" src="materials/pictures/Jenkins.png"> Запуск тестов в Jenkins  </h2>  
+## <img width="5%" title="Jenkins" src="materials/pictures/Jenkins.png"> Сборка в Jenkins    
 <p align="center">
 <img width="70%" title="Jenkins Build" src="https://github.com/Taygib/X5Group_Test/blob/FiveTests/materials/screens/Jenkins Start.png?raw=true">
  </p>
+
+## Запуск тестов
+
+__*Локально, из терминала:*__
+```
+gradle clean x5GroupTests
+```
+__*Удаленно, из Jenkins:*__
+```
+clean
+${TASK}
+-Dbrowser=${Browser}
+-DbrVersion=${BrVersion}
+-DbrSize=${BrSize}
+-DbaseUrl=${BaseUrl}
+-Dselenoid=${Selenoid}
+-DselenoidRemote=${SelenoidRemote}
+```
+## Отчет о прохождении тестов в Allure и Telegram
 
 <h2> №1 Тест главной страницы </h2>
 
