@@ -106,7 +106,7 @@ https://user-images.githubusercontent.com/105595414/225115497-60e318ce-768a-444b
 </p>
 
 <p align="center">
-img width="40%" src = "materials/screens/test №3 menuContain2 Telegram.png") 
+<img width="40%" src = "materials/screens/test №3 menuContain2 Telegram.png"> 
 </p>
 
 ### <img width="5%" title="Selenoid" src="materials/pictures/Selenoid.png"> Видео теста на Selenoid
@@ -117,7 +117,14 @@ https://user-images.githubusercontent.com/105595414/225117313-c7a4cd03-4778-4437
 
 |<img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" > Allure![test №4 FeedBackEmployee.png](materials%2Fscreens%2Ftest%20%E2%84%964%20FeedBackEmployee.png)|<img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" > Allure![test №4 FeedBackEmployee1.png](materials%2Fscreens%2Ftest%20%E2%84%964%20FeedBackEmployee1.png)|
 |:---:|:---:|
-|<img width="5%" title="Telegram" src="materials/pictures/Telegram.png"> Telegram![test №4 FeedBackEmployee2 Telegram.png](materials%2Fscreens%2Ftest%20%E2%84%964%20FeedBackEmployee2%20Telegram.png)||
+
+<p align="center">
+<img width="3%" title="Telegram" src="materials/pictures/Telegram.png"> Telegram
+</p>
+
+<p align="center">
+<img width="40%" src = "materials/screens/test №4 FeedBackEmployee2 Telegram.png">
+</p>
 
 ### <img width="5%" title="Selenoid" src="materials/pictures/Selenoid.png"> Видео теста на Selenoid
 
@@ -127,7 +134,13 @@ https://user-images.githubusercontent.com/105595414/225122657-60f841f9-0216-4920
 
 |      <img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" > Allure![test №5 AllTests.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests.png)      |      <img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" >    Allure![test №5 AllTests1-1.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests1-1.png)          |
 |:-----------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------:|
-|   <img width="5%" title="Telegram" src="materials/pictures/Telegram.png"> Telegram![test №5 AllTests2 Telegram.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests2%20Telegram.png) | |
 
+<p align="center">
+<img width="3%" title="Telegram" src="materials/pictures/Telegram.png"> Telegram
+</p>
+
+<p align="center">
+<img width="40%" src = "materials/screens/test №5 AllTests2 Telegram.png">
+</p>
 
 
