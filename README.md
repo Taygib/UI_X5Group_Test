@@ -66,7 +66,7 @@ ${TASK}
 |:-------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------:|
 
 <p align="center">
-<img width="5%" title="Telegram" src="materials/pictures/Telegram.png">Telegram
+<img width="3%" title="Telegram" src="materials/pictures/Telegram.png">Telegram
 </p>
 <p align="center">
 <img width="40%"  src="materials/screens/test%20%E2%84%961%20MainPage2%20Telegram.png?raw=true">                                                                            
