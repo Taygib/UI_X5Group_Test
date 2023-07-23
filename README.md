@@ -25,7 +25,7 @@
 - - *Партнерам*
 - - *Инвесторам*
 - *Проверка поиска*
-- *Проверка наличие подменю:*
+- *Проверка наличие подменю в меню:*
 - - *Компания*
 - - *Партнерам*
 - - *Инвесторам*
@@ -64,7 +64,13 @@ ${TASK}
 
 |        <img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" > Allure <img src="materials/screens/test%20%E2%84%961%20MainPage.png?raw=true">        | <img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" > Allure<img src="materials/screens/test%20%E2%84%961%20MainPage1.png?raw=true"> |
 |:-------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------:|
-| <img width="5%" title="Telegram" src="materials/pictures/Telegram.png"> Telegram<img  src="materials/screens/test%20%E2%84%961%20MainPage2%20Telegram.png?raw=true"> |                                                                          | 
+
+<p align="center">
+<img width="5%" title="Telegram" src="materials/pictures/Telegram.png">Telegram
+</p>
+<p align="center">
+<img width="40%"  src="materials/screens/test%20%E2%84%961%20MainPage2%20Telegram.png?raw=true">                                                                            
+ </p>
 
 ### <img width="5%" title="Selenoid" src="materials/pictures/Selenoid.png"> Видео теста на Selenoid
 
@@ -93,7 +99,7 @@ https://user-images.githubusercontent.com/105595414/225115497-60e318ce-768a-444b
 
 https://user-images.githubusercontent.com/105595414/225117313-c7a4cd03-4778-4437-a4c0-3cb6495ffd8d.mp4
 
-<h2> №4 Тест обратной связи сотрудника </h2>
+<h2> №4 Тест кликабельности чекбоксов </h2>
 
 |<img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" > Allure![test №4 FeedBackEmployee.png](materials%2Fscreens%2Ftest%20%E2%84%964%20FeedBackEmployee.png)|<img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" > Allure![test №4 FeedBackEmployee1.png](materials%2Fscreens%2Ftest%20%E2%84%964%20FeedBackEmployee1.png)|
 |:---:|:---:|
@@ -103,7 +109,7 @@ https://user-images.githubusercontent.com/105595414/225117313-c7a4cd03-4778-4437
 
 https://user-images.githubusercontent.com/105595414/225122657-60f841f9-0216-4920-83ca-64c76e8905ca.mp4
 
-<h2> №5 прогон всех тестов сразу </h2>
+<h2> №5 прогон всех тестов </h2>
 
 |      <img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" > Allure![test №5 AllTests.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests.png)      |      <img width="5%" title="Allure Report" src="materials/pictures/Allure Report.png" >    Allure![test №5 AllTests1-1.png](materials%2Fscreens%2Ftest%20%E2%84%965%20AllTests1-1.png)          |
 |:-----------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------:|
