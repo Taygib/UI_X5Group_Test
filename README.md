@@ -58,7 +58,7 @@ ${TASK}
 -Dselenoid=${Selenoid}
 -DselenoidRemote=${SelenoidRemote}
 ```
-## :bar-chart: Отчет о прохождении тестов в Allure и Telegram
+## :bar_chart: Отчет о прохождении тестов в Allure и Telegram
 
 <h3> №1 Тест главной страницы </h3>
 
