@@ -68,7 +68,6 @@ public class MainPage {
     public void clickOnPartnersMenu(String text, String clickContentName) {
         corporateBlock.find(byText(text)).hover();
         corporateBlock.find(byText(clickContentName)).click();
-
     }
 
     public void checkClickOnPartners(String Suppliers) {
@@ -79,7 +78,6 @@ public class MainPage {
     public void clickOnInvestorsMenu(String text, String clickContentName) {
         corporateBlock.find(byText(text)).hover();
         corporateBlock.find(byText(clickContentName)).click();
-
     }
 
     public void checkClickOnInvestors(String investors) {
