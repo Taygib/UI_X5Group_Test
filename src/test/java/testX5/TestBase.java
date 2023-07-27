@@ -3,7 +3,7 @@ package testX5;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import config.DriverConfig;
+import config.SelenoidConfig;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
@@ -16,11 +16,7 @@ import pages.*;
 import java.util.Map;
 
 public class TestBase {
-    private final DriverConfig config;
-
-    public TestBase() {
-        this.config = ConfigFactory.create(DriverConfig.class, System.getProperties());
-    }
+    private static SelenoidConfig config = ConfigFactory.create(SelenoidConfig.class, System.getProperties());
 
     MainPage mainPage = new MainPage();
     HeaderSearchPage headerSearchPage = new HeaderSearchPage();
@@ -32,7 +28,8 @@ public class TestBase {
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("brSize", "1520x780");
         Configuration.browserVersion = System.getProperty("brVersion", "100.0");
-        Configuration.remote = System.getProperty("selenoidRemote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+        Configuration.remote = System.getProperty("selenoidRemote",
+                "https://"+config.login()+":"+config.password()+"@"+config.url()+"/wd/hub");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(

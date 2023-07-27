@@ -20,7 +20,6 @@ public class MainPage {
             blockHeader = $(".block-header__heading"),
             calendarHeader = $(".calendar__header");
 
-
     public void openPage(String language, String acceptcookie) {
         open(language);
         cookieConsent.find(byText(acceptcookie)).click();

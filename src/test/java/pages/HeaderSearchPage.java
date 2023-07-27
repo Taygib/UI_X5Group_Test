@@ -17,7 +17,6 @@ public class HeaderSearchPage {
             searchFormButtons = $("div.search-form__buttons"),
             headerLogo = $(".header__logo");
 
-
     public void openPage(String language, String acceptcookie) {
         open(language);
         cookieConsent.find(byText(acceptcookie)).click();

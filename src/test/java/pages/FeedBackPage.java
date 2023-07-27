@@ -1,5 +1,6 @@
 package pages;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.checked;
@@ -9,7 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class FeedBackPage {
     private SelenideElement cookieConsent = $("div.cookie-consent__button-group"),
-            feedbackContent = $(".feedback").$(".feedback__content"),
+            feedback = $(".feedback").$(".feedback__content"),
             feedbackDescription = $(".feedback__description"),
             customSelect = $(".custom-select"),
             css1n9v7xy = $(".css-1n9v7xy"),
@@ -17,6 +18,8 @@ public class FeedBackPage {
             cssdp7ulp = $(".css-dp7ulp"),
             hlfTable = $("div.hlf-table");
 
+    private ElementsCollection feedbackContent = $$(".feedback__content"),
+            buttonInner = $$(".button__inner");
 
     public void openPage(String language, String acceptcookie) {
         open(language);
@@ -24,7 +27,7 @@ public class FeedBackPage {
     }
 
     public void findFeedback(String feedBack) {
-        feedbackContent.hover();
+        feedback.hover();
         feedbackDescription.shouldHave(text(feedBack));
     }
 
@@ -39,8 +42,8 @@ public class FeedBackPage {
     }
 
     public void clickOnButton(String nameButton) {
-        $$(".feedback__content").find(text(nameButton)).hover();
-        $$(".button__inner").find(text(nameButton)).click();
+        feedbackContent.find(text(nameButton)).hover();
+        buttonInner.find(text(nameButton)).click();
     }
 
     public void clickOnCheckboxWhoIAm(String who) {

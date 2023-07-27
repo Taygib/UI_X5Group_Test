@@ -4,6 +4,7 @@ import data.ContentMenu;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -23,6 +24,7 @@ public class X5GroupTest extends TestBase {
     @Tag("mainTest")
     @Owner("Taygib")
     @Severity(SeverityLevel.BLOCKER)
+    @DisplayName("Проверка разделов")
     void mainPageTest() {
         step("Открыть страницу", () -> {
             mainPage.openPage("ru/", "Принять");
@@ -89,6 +91,7 @@ public class X5GroupTest extends TestBase {
     @Tag("Search")
     @Owner("Taygib")
     @Severity(SeverityLevel.BLOCKER)
+    @DisplayName("Проверка поиска")
     void headerSearchTest() {
 
         String firstSearch = "география";
@@ -151,6 +154,7 @@ public class X5GroupTest extends TestBase {
     @Tag("Menu")
     @Owner("Taygib")
     @Severity(SeverityLevel.BLOCKER)
+    @DisplayName("Проверка наличие подменю в меню главной страницы")
     void menuContain(ContentMenu menuSection, List<String> expectedButtons) {
         step("Открыть страницу", () -> {
             menuContainPage.openOnlyPage("ru/");
@@ -166,6 +170,7 @@ public class X5GroupTest extends TestBase {
     @Tag("Feedback")
     @Owner("Taygib")
     @Severity(SeverityLevel.BLOCKER)
+    @DisplayName("Проверка кликабельности чекбоксов")
     void feedBackEmployee() {
 
         String role = "Я сотрудник";
