@@ -7,3 +7,4 @@
 .allure
 .gradlew
 .gradlew.bat
+/src/test/resources/selenoid.properties
