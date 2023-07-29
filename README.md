@@ -38,7 +38,7 @@
  
 ##  <img width="5%" title="Jenkins" src="materials/pictures/Jenkins.png"> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Students/job/testX5Group/)  :gear:  
 <p align="center">
-<img width="70%" title="Jenkins Build" src="https://github.com/Taygib/X5Group_Test/blob/FiveTests/materials/screens/Jenkins Start.png?raw=true">
+<img width="70%" title="Jenkins Build" src="https://github.com/Taygib/X5Group_Test/blob/534a879eb216b033ab9efb25a6ee6aaaeb82aaad/materials/screens/Jenkins%20Start.png?raw=true">
  </p>
 
 ## :rocket: Запуск тестов
