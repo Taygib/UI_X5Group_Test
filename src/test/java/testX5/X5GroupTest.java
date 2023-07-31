@@ -23,7 +23,7 @@ public class X5GroupTest extends TestBase {
     @Tag("Group")
     @Tag("mainTest")
     @Owner("Taygib")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверка разделов")
     void mainPageTest() {
         step("Открыть страницу", () -> {
@@ -157,7 +157,7 @@ public class X5GroupTest extends TestBase {
     @Tag("Group")
     @Tag("Menu")
     @Owner("Taygib")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверка наличие подменю в меню главной страницы")
     void menuContain(ContentMenu menuSection, List<String> expectedButtons) {
         step("Открыть страницу", () -> {

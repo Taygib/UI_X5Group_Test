@@ -5,8 +5,9 @@
 !**/src/test/**
 *.log
 .allure
-.gradlew
-.gradlew.bat
+gradlew
+gradlew.bat
+build
 /src/test/resources/selenoid.properties
 notifications/config.json
 notifications/draft.txt
