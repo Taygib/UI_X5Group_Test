@@ -11,3 +11,4 @@ build
 /src/test/resources/selenoid.properties
 notifications/config.json
 notifications/draft.txt
+gradle/wrapper
