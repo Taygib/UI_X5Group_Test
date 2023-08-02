@@ -159,7 +159,7 @@ public class X5GroupTest extends TestBase {
     @Owner("Taygib")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверка наличие подменю в меню главной страницы")
-    void menuContain(ContentMenu menuSection, List<String> expectedButtons) {
+    void menuContainTest(ContentMenu menuSection, List<String> expectedButtons) {
         step("Открыть страницу", () -> {
             menuContainPage.openOnlyPage("ru/");
         });
@@ -175,7 +175,7 @@ public class X5GroupTest extends TestBase {
     @Owner("Taygib")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка кликабельности чекбоксов")
-    void feedBackEmployee() {
+    void feedBackEmployeeTest() {
 
         String role = "Я сотрудник";
 
