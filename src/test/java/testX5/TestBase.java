@@ -26,8 +26,8 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserSize = System.getProperty("brSize", "1520x780");
-        Configuration.browserVersion = System.getProperty("brVersion", "100.0");
+        Configuration.browserSize = System.getProperty("browserSize", "1520x780");
+        Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
         Configuration.remote = System.getProperty("selenoidRemote",
                 "https://"+config.login()+":"+config.password()+"@"+config.url()+"/wd/hub");
 
