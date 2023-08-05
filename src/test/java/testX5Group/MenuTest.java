@@ -1,4 +1,4 @@
-package testX5;
+package testX5Group;
 
 import data.ContentMenu;
 import io.qameta.allure.Owner;
@@ -14,10 +14,9 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-public class X5GroupTest extends TestBase {
+public class MenuTest extends TestBase {
 
     @Test
     @Tag("Group")
@@ -26,6 +25,7 @@ public class X5GroupTest extends TestBase {
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверка разделов")
     void mainPageTest() {
+
         step("Открыть страницу", () -> {
             mainPage.openPage("ru/", "Принять");
         });
@@ -90,52 +90,7 @@ public class X5GroupTest extends TestBase {
         });
     }
 
-    @Test
-    @Tag("Group")
-    @Tag("Search")
-    @Owner("Taygib")
-    @Severity(SeverityLevel.BLOCKER)
-    @DisplayName("Проверка поиска")
-    void headerSearchTest() {
-
-        String firstSearch = "география";
-        String secondSearch = "X5 Group";
-        String searchType = "по дате";
-
-        step("Открыть страницу", () -> {
-            headerSearchPage.openPage("ru/", "Принять");
-        });
-
-        step("Поиск из главной стр", () -> {
-            headerSearchPage.searchFromMainPage(firstSearch);
-
-            step("проверка поиска", () -> {
-                headerSearchPage.checkSearch(firstSearch);
-            });
-        });
-
-        step("Поиск из раздела результаты", () -> {
-            headerSearchPage.searchFromResultPage(secondSearch);
-
-            step("Тип поиска", () -> {
-                headerSearchPage.searchFromResultPageView(searchType);
-            });
-
-            step("Поиск", () -> {
-                headerSearchPage.searchResult("Найти");
-            });
-
-            step("проверка поиска", () -> {
-                headerSearchPage.checkSearch(secondSearch);
-            });
-        });
-
-        step("Переход на главную страницу", () -> {
-            headerSearchPage.goToMainPage();
-        });
-    }
-
-    static Stream<Arguments> menuContain() {
+    static Stream<Arguments> menuContainTest() {
         return Stream.of(
                 Arguments.of(ContentMenu.COMPANY, List.of(
                         "История компании", "География", "Деловая этика", "Стратегия устойчивого развития")),
@@ -160,72 +115,13 @@ public class X5GroupTest extends TestBase {
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверка наличие подменю в меню главной страницы")
     void menuContainTest(ContentMenu menuSection, List<String> expectedButtons) {
+
         step("Открыть страницу", () -> {
             menuContainPage.openOnlyPage("ru/");
         });
 
         step("Проверка меню на содежания", () -> {
             menuContainPage.parameterMenu(menuSection.toString(), expectedButtons);
-        });
-    }
-
-    @Test
-    @Tag("Group")
-    @Tag("Feedback")
-    @Owner("Taygib")
-    @Severity(SeverityLevel.BLOCKER)
-    @DisplayName("Проверка кликабельности чекбоксов")
-    void feedBackEmployeeTest() {
-
-        String role = "Я сотрудник";
-
-        step("Открыть страницу", () -> {
-            feedBackPage.openPage("ru/", "Принять");
-        });
-
-        step("Выбрать роль", () -> {
-
-            step("Проверка названия раздела =Обратная связь=", () -> {
-                feedBackPage.findFeedback("Обратная связь");
-            });
-
-            step("Найти и выбрать роль", () -> {
-                feedBackPage.findAndClickRole("Выберите роль", role);
-            });
-
-            step("Проверка выбора роли =" + role + "=", () -> {
-                feedBackPage.checkRole(role);
-            });
-
-            step("Нажать на кнопку =Далее=", () -> {
-                feedBackPage.clickOnButton("Далее");
-            });
-        });
-
-        switchTo().window(1);
-
-        step("Выбрать пункт =Я сотрудник=", () -> {
-            feedBackPage.clickOnCheckboxWhoIAm("Я сотрудник");
-
-            step("Проверка выбранного пункта =Я сотрудник=", () -> {
-                feedBackPage.checkClickOnCheckbox("Я сотрудник");
-            });
-        });
-
-        step("Выбрать пункт =Я бывший сотрудник=", () -> {
-            feedBackPage.clickOnCheckboxWhoIAm("Я бывший сотрудник");
-
-            step("Проверка выбранного пункта =Я бывший сотрудник=", () -> {
-                feedBackPage.checkClickOnCheckbox("Я бывший сотрудник");
-            });
-        });
-
-        step("Выбрать пункт =Я не сотрудник=", () -> {
-            feedBackPage.clickOnCheckboxWhoIAm("Я не сотрудник");
-
-            step("Проверка выбранного пункта =Я не сотрудник=", () -> {
-                feedBackPage.checkClickOnCheckbox("Я не сотрудник");
-            });
         });
     }
 }
