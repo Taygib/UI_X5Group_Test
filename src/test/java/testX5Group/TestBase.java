@@ -28,13 +28,13 @@ public class TestBase {
     DzenPage dzenPage = new DzenPage();
     TenChatPage tenChatPage = new TenChatPage();
 
+    static  boolean isRemote = Boolean.getBoolean("isRemote");
+
     @BeforeAll
     static void beforeAll() {
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("browserSize", "1520x780");
         Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
-
-        boolean isRemote = Boolean.getBoolean("isRemote");
 
         if (isRemote) {
             Configuration.remote = System.getProperty("selenoidRemote",

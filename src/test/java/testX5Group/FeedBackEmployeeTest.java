@@ -16,7 +16,7 @@ public class FeedBackEmployeeTest extends TestBase {
     @Tag("Feedback")
     @Owner("Taygib")
     @Severity(SeverityLevel.BLOCKER)
-    @DisplayName("Проверка кликабельности чекбоксов в Обратной связи")
+    @DisplayName("Проверка кликабельности чекбоксов в разделе Обратная связь")
     void feedBackEmployeeTest() {
 
         String role = "Я сотрудник";
