@@ -28,7 +28,7 @@ public class TestBase {
     DzenPage dzenPage = new DzenPage();
     TenChatPage tenChatPage = new TenChatPage();
 
-  //  static  boolean isRemote = Boolean.getBoolean("isRemote");
+    static  boolean isRemote = Boolean.getBoolean("isRemote");
 
     @BeforeAll
     static void beforeAll() {
@@ -36,7 +36,7 @@ public class TestBase {
         Configuration.browserSize = System.getProperty("browserSize", "1520x780");
         Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
 
-      //  if (isRemote) {
+        if (isRemote) {
             Configuration.remote = System.getProperty("selenoidRemote",
                     "https://" + config.login() + ":" + config.password() + "@" + config.url() + "/wd/hub");
 
@@ -46,7 +46,7 @@ public class TestBase {
                     "enableVideo", true
             ));
             Configuration.browserCapabilities = capabilities;
-      //  }
+        }
         Configuration.baseUrl = System.getProperty("baseUrl", "https://www.x5.ru/");
     }
 
