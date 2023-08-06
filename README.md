@@ -2,6 +2,8 @@
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Автотест+страницы+X5Group)](https://www.x5.ru/ru/)
 
+- *X5 Group* — российская розничная торговая компания, управляющая продуктовыми торговыми сетями
+
 <h2>  :hammer_and_wrench: Cтек </h2>
 <p align="center">
   <a href="https://www.jetbrains.com/idea/"><img width="6%" title="IDEA" src="materials/pictures/IDEA.png"> </a>
