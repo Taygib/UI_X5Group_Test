@@ -28,7 +28,7 @@ public class TestBase {
     DzenPage dzenPage = new DzenPage();
     TenChatPage tenChatPage = new TenChatPage();
 
-    static  boolean isRemote = Boolean.getBoolean("isRemote");
+    static boolean isRemote = Boolean.getBoolean("isRemote");
 
     @BeforeAll
     static void beforeAll() {
@@ -46,8 +46,8 @@ public class TestBase {
                     "enableVideo", true
             ));
             Configuration.browserCapabilities = capabilities;
+            Configuration.baseUrl = System.getProperty("baseUrl", "https://www.x5.ru/");
         }
-        Configuration.baseUrl = System.getProperty("baseUrl", "https://www.x5.ru/");
     }
 
     @BeforeEach
