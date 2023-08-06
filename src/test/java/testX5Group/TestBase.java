@@ -37,8 +37,8 @@ public class TestBase {
         Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
 
         if (isRemote) {
-            Configuration.remote = System.getProperty("selenoidRemote",
-                    "https://" + selenoidConfig.login() + ":" + selenoidConfig.password() + "@" + selenoidConfig.url() + "/wd/hub");
+            Configuration.remote = "https://" + selenoidConfig.login() + ":" + selenoidConfig.password() +
+                    "@" + selenoidConfig.url() + "/wd/hub";
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(
