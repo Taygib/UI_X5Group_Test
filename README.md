@@ -51,6 +51,14 @@
 <img width="70%" title="Jenkins Build" src="materials/screens/Jenkins Start.png?raw=true">
  </p>
 
+__*Сборка:*__
+- `Browser` - браузер (например chrome)
+- `BaseUrl` - https://www.x5.ru/
+- `BrowserSize` - разрешение экрана (например 1800x900)
+- `BrowserVersion` - версия браузера
+- `TASK` - x5GroupTests
+
+
 ## :rocket: Запуск тестов
 
 __*Локально, из терминала:*__
