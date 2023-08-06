@@ -16,12 +16,12 @@ import java.util.stream.Stream;
 
 import static io.qameta.allure.Allure.step;
 
+@Owner("Taygib")
 public class MenuTest extends TestBase {
 
     @Test
     @Tag("Group")
     @Tag("mainTest")
-    @Owner("Taygib")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверка разделов")
     void mainPageTest() {
@@ -111,7 +111,6 @@ public class MenuTest extends TestBase {
     @ParameterizedTest
     @Tag("Group")
     @Tag("Menu")
-    @Owner("Taygib")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Проверка наличие подменю в меню главной страницы")
     void menuContainTest(ContentMenu menuSection, List<String> expectedButtons) {

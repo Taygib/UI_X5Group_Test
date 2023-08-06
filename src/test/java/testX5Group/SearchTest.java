@@ -9,11 +9,11 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
+@Owner("Taygib")
 public class SearchTest extends TestBase {
     @Test
     @Tag("Group")
     @Tag("Search")
-    @Owner("Taygib")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка поиска")
     void headerSearchTest() {

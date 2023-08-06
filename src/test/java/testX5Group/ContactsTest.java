@@ -10,11 +10,11 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
+@Owner("Taygib")
 public class ContactsTest extends TestBase {
     @Test
     @Tag("Group")
     @Tag("Contact")
-    @Owner("Taygib")
     @Severity(SeverityLevel.TRIVIAL)
     @DisplayName("Проверка контактной информации")
     void contactInformationTest() {
@@ -37,7 +37,6 @@ public class ContactsTest extends TestBase {
     @Test
     @Tag("Group")
     @Tag("Contact")
-    @Owner("Taygib")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка страницы Telegram")
     void openTelegramTest() {
@@ -60,7 +59,6 @@ public class ContactsTest extends TestBase {
     @Test
     @Tag("Group")
     @Tag("Contact")
-    @Owner("Taygib")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка страницы VK")
     void openVKTest() {
@@ -83,7 +81,6 @@ public class ContactsTest extends TestBase {
     @Test
     @Tag("Group")
     @Tag("Contact")
-    @Owner("Taygib")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка страницы Dzen")
     void openDzenTest() {
@@ -106,7 +103,6 @@ public class ContactsTest extends TestBase {
     @Test
     @Tag("Group")
     @Tag("Contact")
-    @Owner("Taygib")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка страницы TenChat")
     void openTenChatTest() {

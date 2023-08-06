@@ -10,11 +10,11 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.switchTo;
 import static io.qameta.allure.Allure.step;
 
+@Owner("Taygib")
 public class FeedBackEmployeeTest extends TestBase {
     @Test
     @Tag("Group")
     @Tag("Feedback")
-    @Owner("Taygib")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка кликабельности чекбоксов в разделе Обратная связь")
     void feedBackEmployeeTest() {
