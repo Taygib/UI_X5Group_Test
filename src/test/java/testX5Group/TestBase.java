@@ -28,13 +28,13 @@ public class TestBase {
     DzenPage dzenPage = new DzenPage();
     TenChatPage tenChatPage = new TenChatPage();
 
+    static boolean isRemote = Boolean.getBoolean("isRemote");
+
     @BeforeAll
     static void beforeAll() {
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("browserSize", "1520x780");
         Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
-
-        boolean isRemote = Boolean.getBoolean("isRemote");
 
         if (isRemote) {
             Configuration.remote = System.getProperty("selenoidRemote",
@@ -45,9 +45,8 @@ public class TestBase {
                     "enableVNC", true,
                     "enableVideo", true
             ));
-            Configuration.browserCapabilities = capabilities;
-        }
-        Configuration.baseUrl = System.getProperty("baseUrl", "https://www.x5.ru/");
+            Configuration.browserCapabilities = capabilities;}
+            Configuration.baseUrl = System.getProperty("baseUrl", "https://www.x5.ru/");
     }
 
     @BeforeEach
@@ -57,12 +56,14 @@ public class TestBase {
 
     @AfterEach
     void addAttachments() {
-        Attach.screenshotAs("Last screenshot");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
         if (isRemote) {
+            Attach.screenshotAs("Last screenshot");
+            Attach.pageSource();
+            Attach.browserConsoleLogs();
+
             Attach.addVideo();
+
+            Selenide.closeWebDriver();
         }
-        Selenide.closeWebDriver();
     }
 }
