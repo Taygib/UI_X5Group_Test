@@ -49,7 +49,7 @@ test {
     systemProperties(System.getProperties())
     useJUnitPlatform()
 }
-task testMainPage(type: Test) {
+task mainPageTest(type: Test) {
     useJUnitPlatform() {
         includeTags("mainTest")
     }
@@ -75,5 +75,10 @@ task feedbackTest(type: Test) {
 task x5GroupTests(type: Test) {
     useJUnitPlatform() {
         includeTags("Group")
+    }
+}
+task contactsTest(type: Test) {
+    useJUnitPlatform() {
+        includeTags("Contact")
     }
 }

@@ -53,7 +53,7 @@
 
 __*Локально, из терминала:*__
 ```
-gradle clean x5GroupTests
+gradle clean test
 ```
 __*Удаленно, из Jenkins:*__
 ```
@@ -65,6 +65,13 @@ ${TASK}
 -DbaseUrl=${BaseUrl}
 -Dselenoid=${Selenoid}
 -DselenoidRemote=${SelenoidRemote}
+```
+### Фаил test.properties
+для запуска теста локально нужно создать фаил в папке resources (src/test/resources) и необходимо указать следующее параметры 
+```
+selenoid_UserName = UserName
+selenoid_Password = Password
+selenoid_Url = Url
 ```
 ## :bar_chart: Пример отчета о прохождении тестов в Allure и Telegram
 
