@@ -33,7 +33,6 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.baseUrl = System.getProperty("baseUrl", "https://www.x5.ru/");
         Configuration.browserSize = System.getProperty("browserSize", "1520x780");
         Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
 
@@ -48,7 +47,7 @@ public class TestBase {
             ));
             Configuration.browserCapabilities = capabilities;
         }
-
+        Configuration.baseUrl = System.getProperty("baseUrl", "https://www.x5.ru/");
     }
 
     @BeforeEach
