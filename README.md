@@ -76,7 +76,7 @@ ${TASK}
 -DselenoidRemote=${SelenoidRemote}
 ```
 ### Фаил test.properties
-для запуска теста локально нужно создать фаил в папке resources (src/test/resources) и необходимо указать следующее параметры 
+Для запуска теста локально нужно создать фаил в папке resources (src/test/resources) и необходимо указать следующее параметры 
 ```
 selenoid_UserName = UserName
 selenoid_Password = Password
