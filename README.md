@@ -53,9 +53,8 @@
 
 __*Сборка:*__
 - `Browser` - браузер (например chrome)
-- `BaseUrl` - https://www.x5.ru/
 - `BrowserSize` - разрешение экрана (например 1800x900)
-- `BrowserVersion` - версия браузера
+- `BrowserVersion` - версия браузера (например 99.0)
 - `TASK` - x5GroupTests
 
 
