@@ -23,12 +23,12 @@ public class ContactsTest extends TestBase {
             contactInformationPage.openPage("ru/", "Принять");
         });
 
-        step("Проверка номеров телефона", () -> {
+        step("Проверка телефонных номеров", () -> {
             contactInformationPage.checkPhoneNumber("Корпоративный центр",
                     "+7 495 662 88 88", "+7 495 789 95 95");
         });
 
-        step("Проверка номеров телефона", () -> {
+        step("Проверка Адреса", () -> {
             contactInformationPage.checkAddress("Адрес",
                     "119049, Россия, г. Москва, улица Коровий Вал, 5, стр. 1");
         });
