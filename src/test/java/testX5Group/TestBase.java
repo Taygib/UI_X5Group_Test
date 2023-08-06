@@ -33,6 +33,7 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.baseUrl = System.getProperty("baseUrl", "https://www.x5.ru/");
         Configuration.browserSize = System.getProperty("browserSize", "1520x780");
         Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
 
@@ -45,8 +46,9 @@ public class TestBase {
                     "enableVNC", true,
                     "enableVideo", true
             ));
-            Configuration.browserCapabilities = capabilities;}
-            Configuration.baseUrl = System.getProperty("baseUrl", "https://www.x5.ru/");
+            Configuration.browserCapabilities = capabilities;
+        }
+
     }
 
     @BeforeEach
@@ -56,14 +58,12 @@ public class TestBase {
 
     @AfterEach
     void addAttachments() {
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
         if (isRemote) {
-            Attach.screenshotAs("Last screenshot");
-            Attach.pageSource();
-            Attach.browserConsoleLogs();
-
             Attach.addVideo();
-
-            Selenide.closeWebDriver();
         }
+        Selenide.closeWebDriver();
     }
 }
