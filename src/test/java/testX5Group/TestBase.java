@@ -45,9 +45,8 @@ public class TestBase {
                     "enableVNC", true,
                     "enableVideo", true
             ));
-            Configuration.browserCapabilities = capabilities;
+            Configuration.browserCapabilities = capabilities;}
             Configuration.baseUrl = System.getProperty("baseUrl", "https://www.x5.ru/");
-        }
     }
 
     @BeforeEach
