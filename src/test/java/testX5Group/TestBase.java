@@ -16,7 +16,7 @@ import pages.*;
 import java.util.Map;
 
 public class TestBase {
-    private static SelenoidConfig config = ConfigFactory.create(SelenoidConfig.class, System.getProperties());
+    private static SelenoidConfig selenoidConfig = ConfigFactory.create(SelenoidConfig.class, System.getProperties());
 
     MainPage mainPage = new MainPage();
     HeaderSearchPage headerSearchPage = new HeaderSearchPage();
@@ -38,7 +38,7 @@ public class TestBase {
 
        // if (isRemote) {
             Configuration.remote = System.getProperty("selenoidRemote",
-                    "https://" + config.login() + ":" + config.password() + "@" + config.url() + "/wd/hub");
+                    "https://" + selenoidConfig.login() + ":" + selenoidConfig.password() + "@" + selenoidConfig.url() + "/wd/hub");
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(
