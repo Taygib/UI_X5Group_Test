@@ -78,7 +78,6 @@ ${TASK}
 -DbrSize=${BrSize}
 -DbaseUrl=${BaseUrl}
 -Dselenoid=${Selenoid}
--DselenoidRemote=${SelenoidRemote}
 ```
 ### Фаил test.properties
 Для запуска теста локально нужно создать фаил в папке resources (src/test/resources) и необходимо указать следующее параметры 
