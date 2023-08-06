@@ -64,10 +64,15 @@ __*Локально, из терминала:*__
 ```
 gradle clean test
 ```
+__*Удаленно, из терминала:*__
+```
+gradle clean test -DisRemote=true
+```
 __*Удаленно, из Jenkins:*__
 ```
 clean
 ${TASK}
+-DisRemote=true
 -Dbrowser=${Browser}
 -DbrVersion=${BrVersion}
 -DbrSize=${BrSize}
