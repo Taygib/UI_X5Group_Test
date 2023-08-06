@@ -6,12 +6,15 @@ import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import pages.FeedBackPage;
 
 import static com.codeborne.selenide.Selenide.switchTo;
 import static io.qameta.allure.Allure.step;
 
 @Owner("Taygib")
 public class FeedBackEmployeeTest extends TestBase {
+    FeedBackPage feedBackPage = new FeedBackPage();
+
     @Test
     @Tag("Group")
     @Tag("Feedback")

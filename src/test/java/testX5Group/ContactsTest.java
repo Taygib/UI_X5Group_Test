@@ -6,12 +6,19 @@ import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import pages.*;
 
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 @Owner("Taygib")
 public class ContactsTest extends TestBase {
+    ContactInformationPage contactInformationPage = new ContactInformationPage();
+    TelegramPage telegramPage = new TelegramPage();
+    VKPage vkPage = new VKPage();
+    DzenPage dzenPage = new DzenPage();
+    TenChatPage tenChatPage = new TenChatPage();
+
     @Test
     @Tag("Group")
     @Tag("Contact")

@@ -11,22 +11,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import pages.*;
 
 import java.util.Map;
 
 public class TestBase {
     private static SelenoidConfig selenoidConfig = ConfigFactory.create(SelenoidConfig.class, System.getProperties());
-
-    MainPage mainPage = new MainPage();
-    HeaderSearchPage headerSearchPage = new HeaderSearchPage();
-    MenuContainPage menuContainPage = new MenuContainPage();
-    FeedBackPage feedBackPage = new FeedBackPage();
-    ContactInformationPage contactInformationPage = new ContactInformationPage();
-    TelegramPage telegramPage = new TelegramPage();
-    VKPage vkPage = new VKPage();
-    DzenPage dzenPage = new DzenPage();
-    TenChatPage tenChatPage = new TenChatPage();
 
     protected static boolean isRemote = Boolean.getBoolean("isRemote");
 

@@ -10,6 +10,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import pages.MainPage;
+import pages.MenuContainPage;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -18,6 +20,8 @@ import static io.qameta.allure.Allure.step;
 
 @Owner("Taygib")
 public class MenuTest extends TestBase {
+    MenuContainPage menuContainPage = new MenuContainPage();
+    MainPage mainPage = new MainPage();
 
     @Test
     @Tag("Group")
