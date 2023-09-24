@@ -70,7 +70,7 @@ public class MenuTest extends TestBase {
 
         step("Проверить название торговых сетей в разделе =сервисы=", () -> {
             mainPage.checkClickOnService("X5 ID", "X5 Банк",
-                    "Х5 Клуб", "X5 Пакет", "5Post");
+                    "Х5 Клуб", "Пакет", "5Post");
         });
 
         step("Открыть раздел =партнерам=", () -> {
