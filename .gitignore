@@ -8,7 +8,7 @@
 gradlew
 gradlew.bat
 build
-/src/test/resources/selenoid.properties
+/src/test/resources/test.properties
 notifications/config.json
 notifications/draft.txt
 gradle/wrapper

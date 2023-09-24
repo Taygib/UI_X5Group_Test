@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class TenChatPage {
     private SelenideElement cookieConsent = $("div.cookie-consent__button-group"),
             footer = $(".footer").$(".footer__nav"),
-            tcUserName = $(".tc-username");
+            tcBreakWord = $(".tc-break-word");
 
     public void openPage(String language, String acceptcookie) {
         open(language);
@@ -22,6 +22,6 @@ public class TenChatPage {
     }
 
     public void checkOpenTenChat(String x5Group) {
-        tcUserName.shouldHave(text(x5Group));
+        tcBreakWord.shouldHave(text(x5Group));
     }
 }
